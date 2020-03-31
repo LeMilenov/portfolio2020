@@ -6,23 +6,28 @@
         </button>
         <!-- center this title -->
         <div class="collapse navbar-collapse navbar-custom-links" id="navbarNavDropdown">
-            <ul class=" navbar-nav ">
-                <li class="nav-item active ">
-                    <a href="/Home ">Home</a>
-                </li>
-                <li class="nav-item ">
-                    <a href="/About ">About</a>
-                </li>
-                <li class="nav-item ">
-                    <a href="/Projects ">Projects</a>
-                </li>
-            </ul>
-            <ng-template [ngTemplateOutlet]="list_icons"></ng-template>
+            <div class="navbar-links-container" style="text-align: center;">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-right: 5vw; width: 25%;">
+                        <a href="/Home ">Home</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 5vw; width: 25%;">
+                        <a href="/About ">About</a>
+                    </li>
+                    <li class="nav-item " style="margin-right: 5vw; width: 25%;">
+                        <a href="/Projects ">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <ng-template [ngTemplateOutlet]="list_icons"></ng-template>
+                    </li>
+                </ul>
+            </div>
 
         </div>
+        <!-- custom menu after click -->
         <div id="myNav" class="overlay">
             <a href="javascript:void(0) " class="closebtn" (click)="closeNav()">&times;</a>
-            <div class="overlay-content navbar-custom-links">
+            <div class="overlay-content">
                 <a href="/Home ">Home</a>
                 <a href="/About ">About</a>
                 <a href="/Projects ">Projects</a>
@@ -32,10 +37,10 @@
     </nav>
     <ng-template #list_icons>
         <div class="icons ">
-            <a href=" # " class="fa fa-github " style="margin-right: 6vw; width: 25%; "></a>
-            <a href="# " class="fa fa-linkedin " style="margin-right: 6vw; width: 25%; "></a>
-            <a href="mailto:dani_milenov@hotmail.fr " class="fa fa-envelope " style="margin-right: 6vw; width: 25%; "></a>
-            <a class="btn btn-primary resumeBtn " style="width: 25%; " href="http://danielmilanov.com/media/CV-Daniel%20Milenov%20Milanov_2020_EN.pdf " target="_blank "> Resume </a>
+            <a href=" # " class="fa fa-github icon-link"></a>
+            <a href="# " class="fa fa-linkedin icon-link"></a>
+            <a href="mailto:dani_milenov@hotmail.fr icon-link" class="fa fa-envelope icon-link"></a>
+            <a class=" btn btn-primary resumeBtn " href="http://danielmilanov.com/media/CV-Daniel%20Milenov%20Milanov_2020_EN.pdf " target="_blank "> Resume </a>
         </div>
     </ng-template>
 
