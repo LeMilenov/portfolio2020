@@ -63,11 +63,9 @@
     }
     
     .navbar-custom-links {
-        margin-left: 20vw;
         font-size: 2vw;
         a {
             color: black;
-            vertical-align: -webkit-baseline-middle;
         }
         a:hover {
             text-decoration: none;
@@ -110,7 +108,7 @@
         width: 25%;
     }
     
-    .navbar-links-container {
+    .smallerIcons {
         display: contents;
         height: 6vh;
         .icons>.icon-link {
