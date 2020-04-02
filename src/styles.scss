@@ -52,6 +52,7 @@ h1{
 }
 p{
     color:$dominant-medium;
+    text-align: justify;
 }
 .jumbotron{
     background-color:transparent;
@@ -95,17 +96,6 @@ p{
     top: 20px;
     right: 45px;
     font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px
-    }
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        left: 35px;
-    }
 }
 
 .hamburger_menu {
@@ -178,12 +168,40 @@ p{
         height: fit-content;
     }
 }
-  .navbar-light {
-      .navbar-toggler{
-          border-color: $dominant-dark;          
-      }
+.navbar-light {
+    .navbar-toggler{
+        border-color: $dominant-dark;          
+    }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(61, 217, 144)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
+}
+.about_container{
+    margin: 0px 10vw;
+    text-align: center;
+}
+.my_face{
+    height: 200px;
+    border-radius: 50%;
+    border-color: $dominant-dark;
+    border-width: medium;
+    margin-right: 2vw;
+}
+// mobile css
+@media screen and (max-width: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        left: 35px;
+    }
+    .about_me_container{
+        display: block !important;
+    }
+}
+.about_me_container {
+    display: flex;
+}
 
-  }
