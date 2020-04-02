@@ -1,1 +1,189 @@
 /* You can add global styles to this file, and also import other style files */
+
+//custom colors
+$accent : #D93654;
+$background: #0F2620;
+$dominant-light: rgb(61, 217, 144);
+$dominant-medium: rgb(255, 255, 255);
+$dominant-dark: #255941;
+//override bootstrap
+$body-bg: $background;
+$body-color: $dominant-light;
+$theme-colors: ( 
+     "primary":    $dominant-light,
+    // "secondary":  $secondary,
+    // "success":    $success,
+    // "info":       $info,
+    // "warning":    $warning,
+    // "danger":     $danger,
+    // "light":      $light,
+    // "dark":       $dark,
+
+    // "blue":       $blue,
+    // "indigo":     $indigo,
+    // "purple":     $purple,
+    // "pink":       $pink,
+    // "red":        $red,
+    // "orange":     $orange,
+    // "yellow":     $yellow,
+    // "green":      $green,
+    // "teal":       $teal,
+    // "cyan":       $cyan,
+    // "white":      $white,
+    // "gray":       $gray-600,
+    // "gray-dark":  $gray-800
+    // "custom-color":#900
+    );
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+a {
+    color:$dominant-light;
+}
+a:hover {
+    color:$accent;
+    text-decoration: none;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    color:$dominant-light;
+}
+p{
+    color:$dominant-medium;
+}
+.jumbotron{
+    background-color:transparent;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: $background;
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: $dominant-light;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color:  $accent;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        left: 35px;
+    }
+}
+
+.hamburger_menu {
+    cursor: pointer;
+    float: right;
+    padding: 28px;
+    font-size: 4vw;
+}
+
+.navbar-custom-links {
+    font-size: 2vw;
+    
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+/* Add a hover effect if you want */
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.resumeBtn {   
+    background-color: transparent;    
+    color:$dominant-light;
+    // height: 6vh;
+    width: fit-content;
+    align-self: center;
+    // margin-top: 3vh;
+    //gets overwritten by overlay
+    font-size: 2vh !important;
+}
+
+.resumeBtn:hover{
+    background-color: $accent;
+    border-color: transparent;
+    color:$dominant-light!important;
+
+}
+.navbar-toggler{
+    border-width: 2px;
+    border-color: $dominant-light;
+    background-color: $background;
+}
+.icons {
+    display: inline-flex;
+    height: 6vh;
+}
+
+.icon-link {
+    margin-right: 6vw;
+    width: 25%;
+}
+
+.smallerIcons {
+    display: contents;
+    height: 6vh;
+    .icons>.icon-link {
+        font-size: 1.5vw;
+        margin-right: 0px;
+    }
+    .resumeBtn{
+        margin-top: 0px;
+        height: fit-content;
+    }
+}
+  .navbar-light {
+      .navbar-toggler{
+          border-color: $dominant-dark;          
+      }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(61, 217, 144)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+  }
