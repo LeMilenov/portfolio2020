@@ -7,25 +7,23 @@
             </div>
             <div>
                 <p>
-                    Hello! I'm Daniel, a software engineer based in Boston, MA who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends. Shortly
-                    after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful projects on a daily basis. Here are a few technologies I've been working with recently:
+                    Fusce nulla odio, ultricies lobortis blandit id, rutrum sed orci. Suspendisse potenti. Donec in justo sagittis, tempus neque in, scelerisque elit. Mauris luctus, turpis ac consectetur porta, nisi odio imperdiet nulla, in semper magna lectus nec nunc. Sed in tortor eget lacus consequat convallis vitae ac nulla. Nulla vel dignissim elit, non laoreet sapien. Cras euismod turpis vel nisl interdum ultricies. Vestibulum ultricies mauris libero, at consequat arcu facilisis ut. Mauris ornare id lectus in convallis. Nulla at enim ut lectus volutpat vehicula. Phasellus lectus magna, auctor semper varius ut, commodo quis arcu. Phasellus a justo quis sem luctus bibendum id eu sapien. Nunc consequat erat non elementum egestas. Cras commodo nibh nec tellus dapibus, quis maximus ipsum bibendum. Maecenas tincidunt, ligula ut ullamcorper molestie, dui orci accumsan quam, sit amet elementum urna ipsum eu lectus. Etiam gravida tincidunt tortor, sed porttitor ex.
                 </p>
                 <ul>
-                    <li>
-                        <a href="#" class="fa fa-java"></a>
+                    <li>                             
+                        angular 
                     </li>
                     <li>
-                        <i class="fa fa-python"></i>
-            
+                        docker        
                     </li>
                     <li>
-                        <i class="fa fa-angular"></i>
+                        c#
                     </li>
                     <li>
-                        <i class="fa fa-sass"></i>
+                        Android
                     </li>
                     <li>
-                        <i class="fa fa-docker"></i>
+                       Ios
                     </li>
                     <li>
                         MySql
@@ -40,11 +38,17 @@
             </div>
         </div>
 
-        <h1> Where I have worked </h1>
+        <h1> Work Experience </h1>
         <!-- show a navigation tab to choose wich to show -->
-    
-        <h1> Here is a link to my projects </h1>
-        <a href="/Projects"> Projects</a>    
+        <nav>
+            <div class="nav nav-tabs custom_nav_tab" id="nav-tab" role="tablist" [innerHtml]="getEmployerLinks() | safe: 'html'">
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent" [innerHtml]="getEmployerData() | safe: 'html'">
+          </div>
+          <br><br>
+        <h1> Check out my projects </h1>
+        <a class="btn btn-primary " href="/Projects"> Projects</a>    
 
     </div>
 

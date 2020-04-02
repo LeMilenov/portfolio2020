@@ -204,4 +204,9 @@ p{
 .about_me_container {
     display: flex;
 }
-
+.custom_nav_tab{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: inherit;
+    overflow-x: auto;
+}
