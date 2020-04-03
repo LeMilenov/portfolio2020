@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { project } from './models/project';
 import { Employer } from './models/employer';
+import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,8 @@ export class DataService {
         1,
         "Transat A.T",
         "Angular Full Stack Developer",  
-        new Date('2020-01-01'),  
-        new Date(),
+        moment('2020-01-01'),  
+        moment(),
         [
           "Creating reusable and dynamic GUIs from models",
           "Creating controllers to access a complex database",
@@ -35,10 +36,10 @@ export class DataService {
         ]),
        new Employer(
          2,
-         "Association Québécoise du Transport et des routes (Aqtr)",
+         "Association Québécoise des Transports (Aqtr)",
          "Angular Front-End Developer",  
-         new Date('2019-01-01'),  
-         new Date('2019-09-01'),
+         moment('2019-01-01'),  
+         moment('2019-09-01'),
          [
           "Implement user authentication",
           "Implement cache logic",
@@ -52,8 +53,8 @@ export class DataService {
         3,
         "One Provider (Brainstorm Network)",
         "Javascript Front-end Developer",  
-        new Date('2018-04-01'),  
-        new Date('2018-09-01'),
+        moment('2018-04-01'),  
+        moment('2018-09-01'),
         [
           "Internationalize the website",
           "Fix bugs",
@@ -63,8 +64,8 @@ export class DataService {
         4,
         "Canada Revenue Agency (CRA)",
         "IT Support Analyst",  
-        new Date('2017-04-01'),  
-        new Date('2017-09-01'),
+        moment('2017-04-01'),  
+        moment('2017-09-01'),
         [
           "Provide support and apply solutions to problems encountered by clients of the agency",
           "Assemble and disassemble computer equipment",

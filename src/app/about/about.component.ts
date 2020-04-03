@@ -32,33 +32,36 @@ export class AboutComponent implements OnInit {
     let html = '';
     html = `<div class="tab-pane fade show active" id="nav-${this.data.getEmployers()[0].id}" role="tabpanel" >
                   <div class='dateLabel'>
-                      ${this.data.getEmployers()[0].dateStart} - ${this.data.getEmployers()[0].dateEnd}}
+                      ${this.data.getEmployers()[0].dateStart.format('MMMM YYYY')} - now 
+                     <br>
+                     (${this.data.getEmployers()[0].dateStart.toNow(true)}) 
                   </div>
                   <div class='title'>
-                      ${this.data.getEmployers()[0].title}}
+                     <h5> ${this.data.getEmployers()[0].title} <h5>
                   </div>
-                  <div class='tasks'>
-                  <ul>`
+                  <div class='tasks'>                  
+                  <ul>`;
                   for(let task of this.data.getEmployers()[0].tasks){
                     html+= `<li> ${task} </li>`
                   }
-                 `</ul>
-                  </div>
-              </div>`;
+        html += `</ul>
+          </div>
+        </div>`;
     for(let employer of this.data.getEmployers().slice(1)){
-      html +=`<div class="tab-pane fade" id="nav-${employer.id}" role="tabpanel" aria-labelledby="nav-${employer.id}">
+      html +=`<div class="tab-pane fade" id="nav-${employer.id}" role="tabpanel" aria-labelledby="nav-${employer.id}-tab">
                 <div class='dateLabel'>
-                    ${employer.dateStart.toString()} - ${employer.dateEnd}
+                    ${employer.dateStart.format('MMMM YYYY')} - ${employer.dateEnd.format('MMMM YYYY')} (${employer.dateStart.from(employer.dateEnd)})
                 </div>
                 <div class='title'>
-                    ${employer.title}
+                <h5>  ${employer.title} <h5>
                 </div>
                 <div class='tasks'>
-                <ul>`
-                for(let task of employer.tasks){
-                  html+= `<li> ${task} </li>`
-                }
-               `</ul> </div>
+                  <ul>`;
+                  for(let task of employer.tasks){
+                    html+= `<li> ${task} </li>`
+                  }
+      html +=`    </ul> 
+                </div>
               </div>
            `;      
     }

@@ -210,3 +210,16 @@ p{
     flex-wrap: inherit;
     overflow-x: auto;
 }
+.tab-pane{
+    text-align: left;
+    .dateLabel{
+        color:$accent;
+    }
+    .title{
+
+    }
+    .tasks{
+        color:$dominant-medium;
+    }
+
+}
