@@ -91,7 +91,14 @@ export class DataService {
       ["Unity","Navigation Mesh", "AI","Multiple menus","Custom animations","Action on specific Triggers","Multiple Cameras","Looting logic","Unlockable doors","Scene life cycles", "Raycast","Multiple Scenes"]
       ,"https://github.com/LeMilenov/MadScareUnity",),
 
-      new project(3,"Jeu du Taquin",
+      new project(3,"Lexicographic Dictionnary",
+      `This apps stores words and definitions in a custom node Tree in Lexicographic order. Each node contains a letter and a reference towards the his childrens.
+       The user can add words and modify their definition if needed. We can load and Save a file containing multiple words with the following format : 'word & definition .'`,
+      "lexicoTree",10,
+      ["Java","Node Tree", "Custom data structure","File Reading/Saving","GUI", "Unit Tests"]
+      ,"https://github.com/LeMilenov/lexicographic-dictionary-tree-java"),
+
+      new project(4,"Jeu du Taquin",
       `Jeu du Taquin is a simple 3x3 puzzle that is made possible through canvas manipulation and multi-dimensionnal arrays in Javascript`,
       "taquin",1,
       ["Javascript","Canvas manipulations","Multi-dimension arrays"],

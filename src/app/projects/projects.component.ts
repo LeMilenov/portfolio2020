@@ -56,7 +56,7 @@ export class ProjectsComponent implements OnInit {
                 }
                 html +=`
                 </ul>
-                ${project.github? `<a href="${project.github}" class="fa fa-github icon-link"></a>`: '' }
+                ${project.github? `<a href="${project.github}" class="fa fa-github icon-link" target="_blank"></a>`: '' }
                 ${project.directLink ?`<a href="${project.directLink}" class="fa fa-window-restore" target="_blank"></a>` : ''}     
                 </div>
                 `;

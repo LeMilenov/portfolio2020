@@ -1,57 +1,55 @@
-<div class="jumbotron" style="height: calc(115vh); overflow-y: auto;">
-    <div class="info_container">
-        <h1> About me </h1>
-        <div class="about_me_container">
-            <div class="my_face">
-                <img class="my_face" src="../../assets/myFace.png">
+<div class="jumbotron">
+        <div class="info_container">
+            <h1> About me </h1>
+            <div class="about_me_container">
+                <div class="my_face">
+                    <img class="my_face" src="../../assets/myFace.png">
+                </div>
+                <div>
+                    <p>
+                        I am currently a student majoring in Software Engineering at Ecole Technologie Supérieure (ETS). 
+                        I have a technical computer science Background (DEC) and have already done 5 internships. 
+                        I mostly specialize in full stack web development but I work with different technologies in my free time.  
+                    </p>
+                    <h4 style="text-align: start;"> here are some technologies that I know</h4>
+                    <ul style="text-align: left; list-style: none;">
+                        <li>                             
+                            Angular 
+                        </li>
+                       
+                        <li>
+                            C# development
+                        </li>
+                        <li>
+                            Android & IOS development
+                        </li>
+                        <li>
+                            MySql & Sql server 2019
+                        </li>
+                        <li>
+                            Azman security groups
+                        </li>
+                        <li>
+                            Unity 
+                        </li>
+                        <li>
+                            Docker & Hyper-V virtualization    
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <p>
-                    I am currently a student majoring in Software Engineering at Ecole Technologie Supérieure (ETS). 
-                    I have a technical computer science Background (DEC) and have already done 5 internships. 
-                    I mostly specialize in full stack web development but I work with different technologies in my free time.  
-                </p>
-                <h4> here are some technologies that I know</h4>
-                <ul style="text-align: left; list-style: none;">
-                    <li>                             
-                        Angular 
-                    </li>
-                   
-                    <li>
-                        C# development
-                    </li>
-                    <li>
-                        Android & IOS development
-                    </li>
-                    <li>
-                        MySql & Sql server 2019
-                    </li>
-                    <li>
-                        Azman security groups
-                    </li>
-                    <li>
-                        Unity 
-                    </li>
-                    <li>
-                        Docker & Hyper-V virtualization    
-                    </li>
-                </ul>
-            </div>
+    
+            <h1> Work Experience </h1>
+            <!-- show a navigation tab to choose wich to show -->
+            <nav>
+                <div class="nav nav-tabs custom_nav_tab" id="nav-tab" role="tablist" [innerHtml]="getEmployerLinks() | safe: 'html'">
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent" [innerHtml]="getEmployerData() | safe: 'html'">
+              </div>
+              <br><br>
+            <h1> Check out my projects </h1>
+            <a class="btn btn-primary " href="/Projects"> Projects</a>    
+    
         </div>
-
-        <h1> Work Experience </h1>
-        <!-- show a navigation tab to choose wich to show -->
-        <nav>
-            <div class="nav nav-tabs custom_nav_tab" id="nav-tab" role="tablist" [innerHtml]="getEmployerLinks() | safe: 'html'">
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent" [innerHtml]="getEmployerData() | safe: 'html'">
-          </div>
-          <br><br>
-        <h1> Check out my projects </h1>
-        <a class="btn btn-primary " href="/Projects"> Projects</a>    
-
     </div>
-
-
-</div>
