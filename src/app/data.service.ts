@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { project } from './models/project';
 import { Employer } from './models/employer';
 import * as moment from 'moment';
-import { ProjectComponent } from './projects/project/project.component';
 
 @Injectable({
   providedIn: 'root'

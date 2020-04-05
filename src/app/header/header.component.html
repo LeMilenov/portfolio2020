@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent; width: 100%;">
-        <a class="navbar-brand" routerLink="/Home" style="width: 20%;">
+        <a class="navbar-brand" style="width: 20%;">
             <img src="assets/logo.png" style="height: 50px;">
         </a>
         <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
@@ -9,10 +9,7 @@
         <!-- center this title -->
         <div class="collapse navbar-collapse navbar-custom-links" id="navbarNavDropdown">
             <!-- should be centered -->
-            <ul class="nav justify-content-center" style="width: 100%;" >
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/Home">Home</a>
-                </li>
+            <ul class="nav justify-content-center" style="width: 100%;" >                
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/About">About</a>
                 </li>
@@ -29,8 +26,7 @@
         <!-- custom menu after click -->
         <div id="myNav" class="overlay">
             <a href="javascript:void(0) " class="closebtn" (click)="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a routerLink="/Home">Home</a>
+            <div class="overlay-content" (click)="closeNav()">
                 <a routerLink="/About">About</a>
                 <a routerLink="/Projects">Projects</a>
                 <ng-template [ngTemplateOutlet]="list_icons"></ng-template>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { project } from '../models/project';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectComponent } from './project/project.component';
 import {MatDialog} from '@angular/material/dialog';
 
 @Component({
@@ -50,7 +49,7 @@ export class ProjectsComponent implements OnInit {
                 </div>
                 <p> ${project.description} </p>
                 <div class="tags_container" >
-                <ul>`;
+                <ul class="accent">`;
                 for(let tags of project.tags){
                   html += ` <li> ${tags} </li> `;
                 }
