@@ -1,3 +1,8 @@
-<p>
-  projects works!
-</p>
+<div class="jumbotron" style="height: calc(115vh); overflow-y: auto;">
+  <h1> My Projects : </h1>
+  <div *ngIf="projects" [innerHtml]="getAllCaroussels() | safe: 'html'" class="info_container">
+    
+    
+  </div>
+
+</div>

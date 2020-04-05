@@ -5,6 +5,7 @@ $accent : #D93654;
 $background: #0F2620;
 $dominant-light: rgb(61, 217, 144);
 $dominant-medium: rgb(255, 255, 255);
+$dominant-medium-dark: rgb(167, 167, 167);
 $dominant-dark: #255941;
 //override bootstrap
 $body-bg: $background;
@@ -56,12 +57,14 @@ p{
 }
 .jumbotron{
     background-color:transparent;
+    text-align: center;
+    overflow-y: hidden;
 }
 .overlay {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     right: 0;
     background-color: $background;
@@ -176,7 +179,7 @@ p{
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(61, 217, 144)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 }
-.about_container{
+.info_container{
     margin: 0px 10vw;
     text-align: center;
 }
@@ -195,7 +198,6 @@ p{
     .overlay .closebtn {
         font-size: 40px;
         top: 15px;
-        left: 35px;
     }
     .about_me_container{
         display: block !important;
@@ -210,16 +212,39 @@ p{
     flex-wrap: inherit;
     overflow-x: auto;
 }
+.nav-tabs .nav-link.active{
+    color:$accent;
+}
 .tab-pane{
     text-align: left;
     .dateLabel{
-        color:$accent;
-    }
-    .title{
-
+        color:$dominant-medium-dark
     }
     .tasks{
         color:$dominant-medium;
     }
 
 }
+.carousel_container{
+    .carousel{
+        margin-bottom: 5vh;
+    }
+    .img-fluid{
+        height: 50vw;
+    }
+    .tags_container{
+        width: 100%;
+        display: flex;
+    }
+    ul{
+        text-align: left;
+        list-style-type: none;
+        width: 75%;
+    }
+    a{   
+        font-size: 3vh;
+    }
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

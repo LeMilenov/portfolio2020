@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { project } from './models/project';
 import { Employer } from './models/employer';
 import * as moment from 'moment';
+import { ProjectComponent } from './projects/project/project.component';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class DataService {
         ]),
        new Employer(
          2,
-         "Association Québécoise des Transports (Aqtr)",
+         "Association Québécoise des Transports (AQTr)",
          "Angular Front-End Developer",  
          moment('2019-01-01'),  
          moment('2019-09-01'),
@@ -75,20 +76,35 @@ export class DataService {
    }
    createProjects(){
     this.projects.push(...[
-      new project(1,"title","git-link",["pics"],["tasks"]),
-      new project(2,"title","git-link",["pics"],["tasks"]),
-      new project(3,"title","git-link",["pics"],["tasks"]),
-      new project(4,"title","git-link",["pics"],["tasks"]),
-    ]);
-  }
+      new project(1,"AQTr events website",
+      `AQTr is a company that organises many events for their clients. They needed a fast, mobile-friendly and easy to use website
+       I have developped a website following a MVC hierarchy to make it easy to maintain. It is powered by an Angular Framework with Material & bootstrap. It uses Sass styling. 
+       Since this was made during a contract there is no available code, click the following button to see a preview!`,
+      "aqtr",10,
+      ["Angular","Typescript","Docker","Hyper-v","Postman","Multi-threading", "Authentification logic", "Local data storage", " "]
+      ,null,"https://endirect.aqtr.com/"),
 
-    getProjects(){
-      return this.projects;
-    }
-    getEmployers(){
-      return this.employers;
-    }
-   }
+      new project(2,"Mad Scare",
+      `Mad Scare is the title of a story driven horror game made in Unity. The character appears in a forest and has to find it s way through multiple levels. 
+       The character can only hide, open doors, read notes and use his flashlight. The goal is to find all the notes before the monster catches you`,
+      "madScare",10,
+      ["Unity","Navigation Mesh", "AI","Multiple menus","Custom animations","Action on specific Triggers","Multiple Cameras","Looting logic","Unlockable doors","Scene life cycles", "Raycast","Multiple Scenes"]
+      ,"https://github.com/LeMilenov/MadScareUnity",),
+
+      new project(3,"Jeu du Taquin",
+      `Jeu du Taquin is a simple 3x3 puzzle that is made possible through canvas manipulation and multi-dimensionnal arrays in Javascript`,
+      "taquin",1,
+      ["Javascript","Canvas manipulations","Multi-dimension arrays"],
+      "https://github.com/LeMilenov/jeuTaquin"),
+    ]);
+  }  
+  getProjects(){
+    return this.projects;
+  }
+  getEmployers(){
+    return this.employers;
+  }
+}
 
 
 
