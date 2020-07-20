@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "portfolio": {
+      "baseHref": "",
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -145,6 +146,6 @@
   },
   "defaultProject": "portfolio",
   "cli": {
-    "analytics": false
+    "analytics": "d79bd6a6-29d0-459f-a11e-116541c319b4"
   }
 }
