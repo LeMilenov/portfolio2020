@@ -40,11 +40,11 @@
             <h1> Work Experience </h1>
             <!-- show a navigation tab to choose wich to show -->
             <nav>
-                <div class="nav nav-tabs custom_nav_tab" id="nav-tab" role="tablist" [innerHtml]="getEmployerLinks() | safe: 'html'">
+                {% comment %} <div class="nav nav-tabs custom_nav_tab" id="nav-tab" role="tablist" [innerHtml]="getEmployerLinks() | safe: 'html'">
                 </div>
               </nav>
               <div class="tab-content" id="nav-tabContent" [innerHtml]="getEmployerData() | safe: 'html'">
-              </div>
+              </div> {% endcomment %}
               <br><br>
             <h1> Check out my projects </h1>
             <a class="btn btn-primary " routerLink="/Projects"> Projects</a>    
