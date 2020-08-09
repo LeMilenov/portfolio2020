@@ -12,6 +12,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SafePipe } from './safe.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ProjectComponent } from './projects/project/project.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SafePipe
+    SafePipe,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

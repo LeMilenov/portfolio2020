@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 //custom colors
-$accent : #D93654;
-$background: #0F2620;
-$dominant-light: rgb(61, 217, 144);
-$dominant-medium: rgb(255, 255, 255);
-$dominant-medium-dark: rgb(167, 167, 167);
-$dominant-dark: #255941;
+$accent : #ff0231;
+$background: #ffffff;
+$dominant-light: rgb(29, 179, 109);
+$dominant-medium: rgb(42, 141, 255);
+$dominant-medium-dark: rgb(250, 52, 52);
+$dominant-dark: #000000;
 //override bootstrap
 $body-bg: $background;
 $body-color: $dominant-light;
@@ -167,8 +167,8 @@ p{
 
 }
 .navbar-toggler{
-    border-width: 2px;
-    border-color: $dominant-light;
+    // border-width: 2px;
+    // border-color: $background;
     background-color: $background;
 }
 .icons {
@@ -194,7 +194,7 @@ p{
 }
 .navbar-light {
     .navbar-toggler{
-        border-color: $dominant-dark;          
+        border-color: $background;          
     }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(61, 217, 144)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");

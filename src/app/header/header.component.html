@@ -1,32 +1,45 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent; width: 100%;">
-        <a class="navbar-brand" style="width: 20%;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: transparent; width: 100%;">
+        <a class="navbar-brand" style="width: 20%;" routerLink="/">
             <img src="assets/logo.png" style="height: 50px;">
         </a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
-          <span class="navbar-toggler-icon "></span>
-        </button>
+        
         <!-- center this title -->
-        <div class="collapse navbar-collapse navbar-custom-links" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse navbar-custom-links" id="navbarNavDropdown" style="padding-right: 2vw;">
             <!-- should be centered -->
-            <ul class="nav justify-content-center" style="width: 100%;" >                
+            <!-- <ul class="nav justify-content-center" style="width: 100%;" >                
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/About">About</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" routerLink="/Projects">Projects</a>
                 </li>
+            </ul> -->
+            <ul class="navbar-nav mr-auto justify-content-center" style="width: 100%;">
+                <!-- put stuff on the far left (having this puts the rest of the divs on the far right) -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="/About">About</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/Projects">Projects</a>
+                </li> -->
             </ul>
             <!-- should be far right -->
             <div class="nav justify-content-end smallerIcons">
                 <ng-template [ngTemplateOutlet]="list_icons" ></ng-template>
-            </div>
-            
+            </div>                
         </div>
+        <!-- TOGGLE BUTTON -->
+       <!-- add "display: something" to make it always visible -->
+       <button style="display: block;" class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
+           <span class="navbar-toggler-icon "></span>
+       </button>        
+       
         <!-- custom menu after click -->
         <div id="myNav" class="overlay">
             <a href="javascript:void(0) " class="closebtn" (click)="closeNav()">&times;</a>
             <div class="overlay-content" (click)="closeNav()">
+                <a routerLink="/">Home</a>
                 <a routerLink="/About">About</a>
                 <a routerLink="/Projects">Projects</a>
                 <ng-template [ngTemplateOutlet]="list_icons"></ng-template>
@@ -35,7 +48,7 @@
     </nav>
         <!--  links again -->    
     <ng-template #list_icons>
-        <div class="icons ">
+        <div class="icons">
             <a href="https://github.com/LeMilenov" class="fa fa-github icon-link"  target="_blank "></a>
             <a href="https://www.linkedin.com/in/daniel-milenov-milanov-857969159/" class="fa fa-linkedin icon-link"  target="_blank "></a>
             <a href="mailto:dani_milenov@hotmail.fr icon-link" class="fa fa-envelope icon-link"></a>
