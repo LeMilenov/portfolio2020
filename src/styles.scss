@@ -5,7 +5,7 @@ $accent : #ff0231;
 $background: #ffffff;
 $dominant-light: rgb(29, 179, 109);
 $dominant-medium: rgb(42, 141, 255);
-$dominant-medium-dark: rgb(250, 52, 52);
+$dominant-medium-dark:#ff0231;
 $dominant-dark: #000000;
 //override bootstrap
 $body-bg: $background;
@@ -37,7 +37,34 @@ $theme-colors: (
     // "custom-color":#900
     );
 @import "node_modules/bootstrap/scss/bootstrap";
+//IMAGES 
 
+header{
+    padding: 1rem;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 23px;
+    height: 100vh;
+    overflow: hidden;    
+}
+
+// body::-webkit-scrollbar {
+//     width: 11px;
+//   }
+//   body {
+//     scrollbar-width: thin;
+//     scrollbar-color: $accent;
+    
+//   }
+//   body::-webkit-scrollbar-track {
+//     background: $background
+//   }
+//   body::-webkit-scrollbar-thumb {
+//     background-color: $dominant-light;
+//     border-radius: 6px;
+//     border: 3px solid $dominant-light;
+//   }
 
 a {
     color:$dominant-light;
@@ -67,7 +94,6 @@ h5{
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
-
 .accent{
     color:$accent;
 }
@@ -78,10 +104,45 @@ p{
     color:$dominant-medium;
     text-align: left;
 }
+
 .jumbotron{
     background-color:transparent;
     text-align: center;
-    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    display: table;   
+    //smooth scroll
+    // overflow-y: scroll;
+    // scroll-behavior: smooth;
+    // scroll-snap-type: y mandatory;
+    
+}
+.name-title{
+    font-size: 8vw;;
+    font-family: "Ivar Headline SemiBold", sans-serif;        
+}
+.home-container{
+    display: table-cell;
+    vertical-align: middle;
+}
+.check-projects{
+    margin-left: -32vw;
+    a{
+        border-radius: 10px 60px;
+        border: 15px solid $dominant-light;
+        background-color: $dominant-light;
+        color:$background;
+        font-size: 4vw !important;
+        a:hover{
+            color:$accent !important;
+        }
+    }
+}
+.credit{
+    position: absolute;
+    bottom: 0;
+    right: 6vw;
+    font-size: 1vw;
 }
 .overlay {
     height: 100%;
@@ -213,19 +274,7 @@ p{
     margin-bottom: 2vh;
     margin-top: 2vh;
 }
-// mobile css
-@media screen and (max-width: 450px) {
-    .overlay a {
-        font-size: 20px
-    }
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-    }
-    .about_me_container{
-        display: block !important;
-    }
-}
+
 .about_me_container {
     display: flex;
 }
@@ -237,6 +286,9 @@ p{
 }
 .nav-tabs .nav-link.active{
     color:$accent;
+}
+.nav-items{
+    color:$dominant-medium
 }
 .tab-pane{
     text-align: left;
@@ -269,27 +321,39 @@ p{
     }
 
 }
-body {
-    font-family: 'Lato', sans-serif;
-}
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body::-webkit-scrollbar {
-    width: 11px;
-  }
-  body {
-    scrollbar-width: thin;
-    scrollbar-color: $accent;
-    
-  }
-  body::-webkit-scrollbar-track {
-    background: $background
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: $dominant-light;
-    border-radius: 6px;
-    border: 3px solid $dominant-light;
-  }
 .main{
     position: relative;
+}
+
+// FOOTER STYLING
+footer{
+    width: 0%;
+    padding: 1vw;
+    background-color:  $background !important;
+    .icons{
+        display: inline-grid;
+    }
+    .fa{
+        width: auto !important;
+    }
+    .icon-link{
+        width: auto !important;
+        margin: auto !important;
+    }
+}
+// mobile css
+@media screen and (max-width: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+    }
+    .about_me_container{
+        display: block !important;
+    }
+    footer{
+        display: none;
+    }
 }
