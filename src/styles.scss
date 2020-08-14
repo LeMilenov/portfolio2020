@@ -2,7 +2,7 @@
 
 //custom colors
 $accent : #ff0231;
-$background: #ffffff;
+$background: rgb(255, 255, 255);
 $dominant-light: rgb(29, 179, 109);
 $dominant-medium: rgb(42, 141, 255);
 $dominant-medium-dark:#ff0231;
@@ -118,8 +118,9 @@ p{
     
 }
 .name-title{
-    font-size: 8vw;;
-    font-family: "Ivar Headline SemiBold", sans-serif;        
+    font-size: 12vw;;
+    font-family: "Ivar Headline SemiBold", sans-serif;       
+    padding-bottom: 5vw; 
 }
 .home-container{
     display: table-cell;
@@ -228,12 +229,14 @@ p{
 
 }
 .navbar-toggler{
-    // border-width: 2px;
-    // border-color: $background;
-    background-color: $background;
+    border-color: $background;  
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(29, 179, 109)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .icons {
     display: inline-flex;
+    padding-top: 4vh;
 }
 
 .icon-link {
@@ -251,14 +254,6 @@ p{
     .resumeBtn{
         margin-top: 0px;
         height: fit-content;
-    }
-}
-.navbar-light {
-    .navbar-toggler{
-        border-color: $background;          
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(61, 217, 144)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 }
 .info_container{
@@ -342,9 +337,9 @@ footer{
     }
 }
 // mobile css
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 992px) {
     .overlay a {
-        font-size: 20px
+        font-size: 6vh;
     }
     .overlay .closebtn {
         font-size: 40px;
@@ -357,3 +352,30 @@ footer{
         display: none;
     }
 }
+//SPHERE ANIMATION CSS
+.animation-wrapper {
+    width: 50%;
+  }
+  
+  .sphere-animation {
+    position: absolute;
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+    width: 580px;
+    height: 580px;
+    margin: -290px 0 0 -290px;
+  }
+  
+  .sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(80,80,80,.35);
+    backface-visibility: hidden;
+  }
+  
+  @media (min-width: 500px) {
+    .sphere path {
+      stroke-width: .4px;
+    }
+  }
