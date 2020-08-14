@@ -92,6 +92,7 @@ export class HomeComponent implements OnInit {
       var elOffsetWidth = el.offsetWidth - pad;
       var parentOffsetWidth = parentEl.offsetWidth;
       var ratio = parentOffsetWidth / elOffsetWidth;
+     
       timeout = setTimeout(()=>{
         anime.set(el, {scale: ratio})
       }, 10);

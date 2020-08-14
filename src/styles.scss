@@ -118,25 +118,27 @@ p{
     
 }
 .name-title{
-    font-size: 12vw;;
+    font-size: 10vw;;
     font-family: "Ivar Headline SemiBold", sans-serif;       
-    padding-bottom: 5vw; 
+    padding-bottom: 3vw; 
+    line-height: initial;
 }
 .home-container{
     display: table-cell;
     vertical-align: middle;
+    //only on pc
+    width: 50%;
+    text-align: left;
+    padding-left: 6vw;
+
 }
 .check-projects{
-    margin-left: -32vw;
     a{
         border-radius: 10px 60px;
         border: 15px solid $dominant-light;
         background-color: $dominant-light;
         color:$background;
-        font-size: 4vw !important;
-        a:hover{
-            color:$accent !important;
-        }
+        font-size: 3.5vw !important;
     }
 }
 .credit{
@@ -336,7 +338,30 @@ footer{
         margin: auto !important;
     }
 }
-// mobile css
+
+//SPHERE ANIMATION CSS
+.animation-wrapper {
+    width: 100%;
+  }
+  
+  .sphere-animation {
+    position: absolute;
+    z-index: -100;
+    top: 50%;
+    right: 10%;
+    width: 580px;
+    height: 580px;
+    margin: -290px 0 0 -290px;
+  }
+  
+  .sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(80,80,80,.35);
+    backface-visibility: hidden;
+  }
+  
+  // mobile css
 @media screen and (max-width: 992px) {
     .overlay a {
         font-size: 6vh;
@@ -351,31 +376,14 @@ footer{
     footer{
         display: none;
     }
-}
-//SPHERE ANIMATION CSS
-.animation-wrapper {
-    width: 50%;
-  }
-  
-  .sphere-animation {
-    position: absolute;
-    z-index: -100;
-    top: 50%;
-    left: 50%;
-    width: 580px;
-    height: 580px;
-    margin: -290px 0 0 -290px;
-  }
-  
-  .sphere path {
-    fill: url(#sphereGradient);
-    stroke-width: 1px;
-    stroke: rgba(80,80,80,.35);
-    backface-visibility: hidden;
-  }
-  
-  @media (min-width: 500px) {
-    .sphere path {
-      stroke-width: .4px;
+    .home-container{
+        width: auto;
+        vertical-align: top;
+        padding-top: 15vh;    
     }
-  }
+    //SPHERE MOBILE CSS
+    .sphere-animation{
+        top: 60%;
+        left:50%;
+    }
+}
