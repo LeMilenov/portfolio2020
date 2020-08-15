@@ -11,8 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SafePipe } from './safe.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
 import { ProjectComponent } from './projects/project/project.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,11 @@ import { ProjectComponent } from './projects/project/project.component';
     AppRoutingModule,
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatRadioModule,
+    FormsModule
+  ],
+  exports:[
+    MatRadioModule
   ],
   providers: [
   ],

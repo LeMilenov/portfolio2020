@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: 'app-home',
@@ -8,25 +9,52 @@ import anime from 'animejs/lib/anime.es.js';
 })
 
 export class HomeComponent implements OnInit {
-  constructor() { }
-  ngOnInit() {
+  private sphereEl;
+  private spherePathEls;
+  private pathLength;
   
-  }
-  ngAfterViewInit() :void {
-    this.sphereAnimation();
+  public possibleDisks = [0,1,2,3,4,5];
+  public selectedDisk  = 0;
+
+  constructor() { }
+  ngOnInit() {  }
+
+  ngAfterViewInit() :void{
+    this.sphereEl = document.querySelector('.sphere-animation');
+    this.spherePathEls = this.sphereEl.querySelectorAll('.sphere path');
+    this.pathLength = this.spherePathEls.length;
+    if(this.sphereEl){
+      this.sphereAnimation();
+    }    
   }
 
-  
-  private sphereAnimation(){
-    var sphereEl = document.querySelector('.sphere-animation');
-    var spherePathEls = sphereEl.querySelectorAll('.sphere path');
-    var pathLength = spherePathEls.length;
+  private openDisk(event : MatRadioChange){
+    var wantedDisk = event.value;
+    //disable the other radiobuttons
+    //animation - close opened disk
+    //animation - open wanted disk
+    // re-enable the radiobuttons
+    var openAnimation = anime({
+      targets: this.spherePathEls[wantedDisk],
+      translateX: 270,
+      direction: 'alternate',
+      loop: false,
+      autoplay: false,
+      easing: 'easeInOutSine'
+    });
+    openAnimation.play();
+  }
+  private sphereAnimation(){     
+    var sphereEl = this.sphereEl;
+    var spherePathEls = this.spherePathEls;
+    var pathLength = this.pathLength;
     var hasStarted = false;
     var aimations = [];
     var accentMain = "rgb(29, 179, 109)";
     var accentSecondary = "rgb(206, 206, 206)";
     this.fitElementToParent(sphereEl);
 
+    //begin and update function need a local variable somehow ??
     var breathAnimation = anime({
       begin: function() {
         for (var i = 0; i < pathLength; i++) {
@@ -49,7 +77,7 @@ export class HomeComponent implements OnInit {
       duration: Infinity,
       autoplay: false
     });
-
+  
     var introAnimation = anime.timeline({
       autoplay: false
     }).add({
@@ -64,7 +92,7 @@ export class HomeComponent implements OnInit {
       delay: anime.stagger(60, {direction: 'reverse'}),
       easing: 'linear'
     }, 0);
-
+  
     var shadowAnimation = anime({
       targets: '#sphereGradient',
       x1: '25%',
@@ -75,7 +103,7 @@ export class HomeComponent implements OnInit {
       easing: 'easeOutQuint',
       autoplay: false
     },0);
-
+  
     breathAnimation.play();
     introAnimation.play();
     shadowAnimation.play();
@@ -100,4 +128,5 @@ export class HomeComponent implements OnInit {
     resize();
     window.addEventListener('resize', resize);
   }
+  
 }

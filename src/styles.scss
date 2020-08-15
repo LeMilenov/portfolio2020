@@ -118,7 +118,7 @@ p{
     
 }
 .name-title{
-    font-size: 10vw;;
+    font-size: 7vw;;
     font-family: "Ivar Headline SemiBold", sans-serif;       
     padding-bottom: 3vw; 
     line-height: initial;
@@ -339,14 +339,13 @@ footer{
     }
 }
 
-//SPHERE ANIMATION CSS
-.animation-wrapper {
-    width: 100%;
-  }
+    //SPHERE ANIMATION CSS
+    .animation-wrapper {
+        width: 90%;
+    }
   
   .sphere-animation {
     position: absolute;
-    z-index: -100;
     top: 50%;
     right: 10%;
     width: 580px;
@@ -360,7 +359,13 @@ footer{
     stroke: rgba(80,80,80,.35);
     backface-visibility: hidden;
   }
-  
+.mat-radio-group{
+    padding:35%;
+}
+.mat-radio-label{
+    display: grid !important;
+    padding-right: 5px;
+}
   // mobile css
 @media screen and (max-width: 992px) {
     .overlay a {
