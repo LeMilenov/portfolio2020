@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   public isOpeningDisk = false;
   public openedDisk : any = null;
   private NUMBER_OF_DISKS_OFFSET:number = 8;
-  private ANIMATION_DURATION:number = 1000;
+  private ANIMATION_DURATION:number = 3000;
   // private CIRCLE_PATH = "m464.094274,412.261094c-103.061585,109.316576 -217.384075,24.163125 -236.021457,0.076324c-18.637382,-24.086801 -39.179641,-92.061521 63.883302,-201.376657c103.061585,-109.313696 199.732396,-52.960432 223.800646,-28.873631c24.06825,24.086801 62.26083,112.22266 -40.800755,221.536356l-10.861736,8.637608z";
   // private CIRCLE_PATH2 = "m146.886536,253.500011c0,-89.289204 73.666802,-161.613459 164.613471,-161.613459c90.946669,0 164.613471,72.324255 164.613471,161.613459c0,89.289204 -73.666802,161.613459 -164.613471,161.613459c-90.946669,0 -164.613471,-72.324255 -164.613471,-161.613459z";
   // private CIRCLE_PATH3 = "m186.886536,264.499996c0,-89.289204 73.666802,-161.613459 164.613471,-161.613459c90.946669,0 164.613471,72.324255 164.613471,161.613459c0,89.289204 -73.666802,161.613459 -164.613471,161.613459c-90.946669,0 -164.613471,-72.324255 -164.613471,-161.613459z";
@@ -44,10 +44,34 @@ export class HomeComponent implements OnInit {
       this.initSphereAnimation();
     }
     //we open the first disk
-    // this.openDisk(this.NUMBER_OF_DISKS_OFFSET);
+    this.openDiskv2(0);
   }
   private radioButtonOnChange(event : MatRadioChange){
     this.openDisk(event.value + this.NUMBER_OF_DISKS_OFFSET);
+  }
+  private openDiskv2(wantedDisk){
+    //starts animation that translates to the -y and -x the first half and y x for the second half
+    var first_half_paths = this.spherePathEls.slice(0,this.pathLength/2);
+    var second_half_paths = this.spherePathEls.slice(this.pathLength/2);
+    this.breathAnimation.pause();
+
+    var openAnimation = anime.timeline({
+      easing: 'easeOutExpo',
+      duration: this.ANIMATION_DURATION
+    });
+    openAnimation
+    .add({
+      targets: first_half_paths,
+      translateX: 150,
+    },1000)
+    .add({
+      targets: second_half_paths,
+      translateY: 150,
+    },1000);
+
+    setTimeout(()=>{
+      this.restartAnimationWithNewValues();
+    }, this.ANIMATION_DURATION);
   }
   private openDisk(wantedDisk){
      
