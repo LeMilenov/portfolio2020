@@ -10,55 +10,91 @@ import { MatRadioChange } from '@angular/material/radio';
 
 export class HomeComponent implements OnInit {
   private sphereEl;
-  private spherePathEls;
+  private spherePathEls : any[];
   private pathLength;
-  
+  private breathAnimation;
+  private introAnimation;
+  private shadowAnimation;
   public possibleDisks = [0,1,2,3,4,5];
   public selectedDisk  = 0;
+  //used to know if the sphere is in mid animation or not
+  public isOpeningDisk = false;
+  public openedDisk = null;
+  private NUMBER_OF_DISKS_OFFSET:number = 10;
 
   constructor() { }
   ngOnInit() {  }
 
-  ngAfterViewInit() :void{
+  ngAfterViewInit(){
+    //connect the DOM to the script
     this.sphereEl = document.querySelector('.sphere-animation');
-    this.spherePathEls = this.sphereEl.querySelectorAll('.sphere path');
+    this.spherePathEls = Array.from(this.sphereEl.querySelectorAll('.sphere path'));
     this.pathLength = this.spherePathEls.length;
+    //if we get it, we start the animations
     if(this.sphereEl){
-      this.sphereAnimation();
-    }    
+      this.initSphereAnimation();
+    }
+    //we open the first disk
+    this.openDisk(this.NUMBER_OF_DISKS_OFFSET);
   }
-
-  private openDisk(event : MatRadioChange){
-    var wantedDisk = event.value;
+  private radioButtonOnChange(event : MatRadioChange){
+    this.openDisk(event.value + this.NUMBER_OF_DISKS_OFFSET);
+  }
+  private openDisk(wantedDisk){
     //disable the other radiobuttons
+    this.isOpeningDisk = true;
     //animation - close opened disk
+    var closeAnimation = anime({});
+    
+    //add previously openedDisk and remove the new one
+    if(this.openedDisk)
+      this.spherePathEls.splice(this.selectedDisk,0,this.openedDisk);
+    //remove openedDisk from spherePaths    
+    this.openedDisk = this.spherePathEls.splice(wantedDisk,1);
+    
+    //re init the animation
+    this.stopSphereAnimation();
+    this.initSphereAnimation();
+   
     //animation - open wanted disk
-    // re-enable the radiobuttons
+    // re-enable the radiobuttons once the animation is done
     var openAnimation = anime({
-      targets: this.spherePathEls[wantedDisk],
-      translateX: 270,
-      direction: 'alternate',
+      targets: this.openedDisk,
+      translateY: 50,
+      translateX: 50,
+      // direction: 'alternate',
       loop: false,
-      autoplay: false,
-      easing: 'easeInOutSine'
+      autoplay: true,
+      duration:3000,
+      easing: 'easeInOutQuad'
     });
-    openAnimation.play();
+    //TEST -> not 3 secs, should be when the animation is done
+    var timeout = null;
+    timeout = setTimeout(()=>{
+      this.isOpeningDisk = false;      
+    }, 3000);
+
   }
-  private sphereAnimation(){     
+  /**
+   * creates the basic animations for the svg sphere
+   * use var objects for the begin / update :function()
+   */
+  private initSphereAnimation(){     
     var sphereEl = this.sphereEl;
     var spherePathEls = this.spherePathEls;
     var pathLength = this.pathLength;
     var hasStarted = false;
-    var aimations = [];
+    var animations = [];
     var accentMain = "rgb(29, 179, 109)";
     var accentSecondary = "rgb(206, 206, 206)";
     this.fitElementToParent(sphereEl);
 
     //begin and update function need a local variable somehow ??
-    var breathAnimation = anime({
+    this.breathAnimation = anime({
       begin: function() {
         for (var i = 0; i < pathLength; i++) {
-          aimations.push(anime({
+          //animate every path except the opendisk        
+          animations.push(anime({
             targets: spherePathEls[i],
             stroke: {value: [accentSecondary, accentMain], duration: 500},
             translateX: [2, -4],
@@ -69,7 +105,7 @@ export class HomeComponent implements OnInit {
         }
       },
       update: function(ins) {
-        aimations.forEach(function(animation, i) {
+        animations.forEach(function(animation, i) {
           var percent = (1 - Math.sin((i * .35) + (.0022 * ins.currentTime))) / 2;
           animation.seek(animation.duration * percent);
         });
@@ -78,7 +114,7 @@ export class HomeComponent implements OnInit {
       autoplay: false
     });
   
-    var introAnimation = anime.timeline({
+    this.introAnimation = anime.timeline({
       autoplay: false
     }).add({
       targets: spherePathEls,
@@ -93,7 +129,7 @@ export class HomeComponent implements OnInit {
       easing: 'linear'
     }, 0);
   
-    var shadowAnimation = anime({
+    this.shadowAnimation = anime({
       targets: '#sphereGradient',
       x1: '25%',
       x2: '25%',
@@ -104,11 +140,18 @@ export class HomeComponent implements OnInit {
       autoplay: false
     },0);
   
-    breathAnimation.play();
-    introAnimation.play();
-    shadowAnimation.play();
+    this.startSphereAnimation();   
   }
-
+  private startSphereAnimation(){
+    this.breathAnimation.play();
+    this.introAnimation.play();
+    this.shadowAnimation.play();
+  }
+  private stopSphereAnimation(){
+    this.breathAnimation.pause();
+    this.introAnimation.pause();
+    this.shadowAnimation.pause();
+  }
   private fitElementToParent(el, padding = 0) {
     var timeout = null;
     function resize() {

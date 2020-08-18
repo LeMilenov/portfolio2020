@@ -5,7 +5,7 @@
             Daniel Milanov
         </div>
         <div class="check-projects">
-            <a routerLink="/Projects"> Check out my projects</a>    
+            <a routerLink="/Projects"> View all my projects</a>    
         </div>
          <!-- ANIMATION ANIME.JS -->
         <div class="animation-wrapper">
@@ -49,9 +49,9 @@
                     <path d="M125.608 125.241c-35.88 35.88-75.255 54.677-87.947 41.985-12.692-12.692 6.105-52.067 41.985-87.947C115.525 43.4 154.9 24.603 167.592 37.295c12.692 12.692-6.105 52.067-41.984 87.946z"/>
                     <path d="M109.698 109.332c-24.408 24.407-51.12 37.268-59.663 28.726-8.542-8.543 4.319-35.255 28.727-59.662 24.407-24.408 51.12-37.27 59.662-28.727 8.543 8.543-4.319 35.255-28.726 59.663z"/>
                 </svg>
-                <fieldset [disabled]=false>
-                    <mat-radio-group  [(ngModel)]="selectedDisk" style="">
-                        <mat-radio-button class="custom_radio" *ngFor="let disk of possibleDisks" [value]="disk" (change)="openDisk($event)">
+                <fieldset [disabled]="isOpeningDisk">
+                    <mat-radio-group  [(ngModel)]="selectedDisk" >
+                        <mat-radio-button class="custom_radio" *ngFor="let disk of possibleDisks" [value]="disk" (change)="radioButtonOnChange($event)">
                             {{disk +1}}
                         </mat-radio-button>
                     </mat-radio-group>
