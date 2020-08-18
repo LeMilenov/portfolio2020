@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
       this.initSphereAnimation();
     }
     //we open the first disk
-    this.openDisk(this.NUMBER_OF_DISKS_OFFSET);
+    // this.openDisk(this.NUMBER_OF_DISKS_OFFSET);
   }
   private radioButtonOnChange(event : MatRadioChange){
     this.openDisk(event.value + this.NUMBER_OF_DISKS_OFFSET);
@@ -195,9 +195,9 @@ export class HomeComponent implements OnInit {
    * restart with new spherePathEls
    */
   private restartAnimationWithNewValues(){
-    // this.breathAnimation.pause();
-    // this.initBreathAnimation(this.spherePathEls);
-    // this.breathAnimation.play();
+    this.breathAnimation.pause();
+    this.initBreathAnimation(this.spherePathEls);
+    this.breathAnimation.play();
   }
   /**
    * fit the sphere to the screen
