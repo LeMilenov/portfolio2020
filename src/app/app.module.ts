@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import { ProjectComponent } from './projects/project/project.component';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports:[
     MatRadioModule
