@@ -15,6 +15,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import { ProjectComponent } from './projects/project/project.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -25,7 +28,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HeaderComponent,
     FooterComponent,
     SafePipe,
-    ProjectComponent
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatRadioModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule,
+    FlexLayoutModule,    
+    MatButtonModule,
   ],
   exports:[
     MatRadioModule
