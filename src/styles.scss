@@ -37,15 +37,14 @@ $theme-colors: (
     // "custom-color":#900
     );
 @import "node_modules/bootstrap/scss/bootstrap";
-//IMAGES 
 
-header{
-    padding: 1rem;
+html, body {
+    overflow: hidden;
 }
 body {
     font-family: 'Karla', sans-serif;
     font-size: 23px;
-    overflow: hidden;
+    position: relative;
 }
 
 a {
@@ -93,13 +92,13 @@ p{
     text-align: center;
     width: 100%;
     height: 90vh;
-    padding: 0 2vw;
     display: block;
-    overflow: auto;  
+    overflow: auto; 
+    overflow-x: hidden; 
+    margin: 2vh 0;
     //smooth scroll
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
     
 }
 .jumbotron::-webkit-scrollbar {
@@ -125,12 +124,10 @@ p{
     line-height: initial;
 }
 .home-container{
-    display: table-cell;
-    vertical-align: middle;
-    //only on pc
-    width: 50%;
-    text-align: left;
-    padding-left: 6vw;
+    position: absolute;
+    bottom: 50%;
+    text-align: center;
+    width: 100%;
 
 }
 .check-projects{
@@ -302,27 +299,6 @@ p{
     }
 
 }
-.carousel_container{
-    .carousel{
-        margin-bottom: 5vh;
-    }
-    .img-fluid{
-        max-height: 40vw;
-    }
-    .tags_container{
-        width: 100%;
-        display: flex;
-    }
-    ul{
-        text-align: left;
-        list-style-type: none;
-        width: 75%;
-    }
-    a{   
-        font-size: 3vh;
-    }
-
-}
 .main{
     position: relative;
 }
@@ -345,26 +321,27 @@ footer{
     }
 }
 
-    //SPHERE ANIMATION CSS
-    .animation-wrapper {
-        width: 90%;
-    }
-  
-  .sphere-animation {
+//SPHERE ANIMATION CSS
+.animation-wrapper {
+    width: 80%;
+}
+
+.sphere-animation {
     position: absolute;
-    top: 50%;
-    left: 75%;
-    width: 580px;
-    height: 580px;
-    margin: -290px 0 0 -290px;
-  }
+    top: 30%;
+    z-index: -1;      
+    left: 30%;
+    // width: 580px;
+    // height: 580px;
+    // margin: -290px 0 0 -290px;
+}
   
-  .sphere path {
+.sphere path {
     fill: url(#sphereGradient);
     stroke-width: 1px;
     stroke: rgba(80,80,80,.35);
     backface-visibility: hidden;
-  }
+}
 .mat-radio-group{
     padding:35%;
 }
@@ -384,8 +361,11 @@ fieldset:disabled{
   border-radius: 5px;
   outline: none;
 }
+.only-mobile{
+    display: none !important;
+}
   // mobile css
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
     .overlay a {
         font-size: 6vh;
     }
@@ -396,21 +376,52 @@ fieldset:disabled{
     .about_me_container{
         display: block !important;
     }
-    footer{
-        display: none;
-    }
-    .home-container{
-        width: auto;
-        vertical-align: top;
-        padding-top: 10vh;    
-    }
-    //SPHERE MOBILE CSS
-    .sphere-animation{
-        left:50%;
-    }
-    .check-projects{
+    .animation-wrapper{
         position: absolute;
-        bottom: 15%;
+        width: 100%;
+        bottom: 10%;
+        right: 25%;
+    }
+    .sphere-animation{
+        position: relative;
+        left: 20%;
+
+    }
+    .only-mobile{
+        display:block !important;
     }
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// OVERRIDE BOOTSTRAP NAV FOR HEADER
+// @media screen and (max-width:992px){
+//     header{
+//         padding:0;
+//     }
+//     .navbar{
+//         position: absolute;
+//         z-index: 1;
+//         bottom:0;
+//         background-color: white !important;
+//         width: 100%;
+//         padding: 0;
+//     }
+//     .navbar-collapse{
+//         flex-basis: auto;
+//         padding-right: 2vw;
+//         flex-grow: 0;
+//     }
+//     .navbar-collapse>ul{
+//         flex-direction: row;
+//     }
+//     .navbar-nav{
+//         display: flex;
+//         flex-direction: column;
+//         padding-left: 0;
+//         margin-bottom: 0;
+//         list-style: none;
+//     }
+//     .nav-link{
+//         padding-right: 0.5rem !important;
+//         padding-left: 0.5rem !important;
+//         font-size: 5vw;
+//     }
+// }

@@ -24,7 +24,9 @@ export class HeaderComponent implements OnInit {
   closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
-
+  openContact(){
+    
+  }
   // @HostListener('window:scroll')
   // checkScroll() {
       

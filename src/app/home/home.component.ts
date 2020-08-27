@@ -209,7 +209,7 @@ export class HomeComponent implements OnInit {
     function resize() {
       if (timeout) clearTimeout(timeout);
       
-      anime.set(el, {scale: 1});
+      anime.set(el, {scale: 0.75});
       var pad = padding || 0;
       var parentEl = el.parentNode;
       var elOffsetWidth = el.offsetWidth - pad;
