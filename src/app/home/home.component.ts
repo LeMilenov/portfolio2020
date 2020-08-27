@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import * as anime from 'animejs';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-home',
