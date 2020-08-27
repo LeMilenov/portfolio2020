@@ -45,24 +45,7 @@ header{
 body {
     font-family: 'Karla', sans-serif;
     font-size: 23px;
-    height: 100vh;
-}
-
-body::-webkit-scrollbar {
-    width: 11px;
-  }
-body {
-    scrollbar-width: thin;
-    scrollbar-color: $accent;
-
-}
-body::-webkit-scrollbar-track {
-    background: $background
-}
-body::-webkit-scrollbar-thumb {
-    background-color: $dominant-light;
-    border-radius: 6px;
-    border: 3px solid $dominant-light;
+    overflow: hidden;
 }
 
 a {
@@ -106,16 +89,34 @@ p{
 }
 
 .jumbotron{
-    background-color:transparent;
+    background-color: transparent;
     text-align: center;
     width: 100%;
-    height: 100%;
-    display: table;   
+    height: 90vh;
+    padding: 0 2vw;
+    display: block;
+    overflow: auto;  
     //smooth scroll
-    // overflow-y: scroll;
-    // scroll-behavior: smooth;
-    // scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
     
+}
+.jumbotron::-webkit-scrollbar {
+    width: 11px;
+  }
+  .jumbotron {
+    scrollbar-width: thin;
+    scrollbar-color: $accent;
+
+}
+.jumbotron::-webkit-scrollbar-track {
+    background: $background
+}
+.jumbotron::-webkit-scrollbar-thumb {
+    background-color: $dominant-light;
+    border-radius: 6px;
+    border: 3px solid $dominant-light;
 }
 .name-title{
     font-size: 7vw;;
@@ -374,6 +375,15 @@ footer{
 fieldset:disabled{
     display: none;
 }
+.back-to-top{
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+}
   // mobile css
 @media screen and (max-width: 425px) {
     .overlay a {
@@ -403,5 +413,4 @@ fieldset:disabled{
         bottom: 15%;
     }
 }
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
