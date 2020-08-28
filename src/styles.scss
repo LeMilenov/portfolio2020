@@ -117,19 +117,7 @@ p{
     border-radius: 6px;
     border: 3px solid $dominant-light;
 }
-.name-title{
-    font-size: 7vw;;
-    font-family: "Ivar Headline SemiBold", sans-serif;       
-    padding-bottom: 3vw; 
-    line-height: initial;
-}
-.home-container{
-    position: absolute;
-    bottom: 50%;
-    text-align: center;
-    width: 100%;
 
-}
 .check-projects{
     a{
         border-radius: 10px 60px;
@@ -139,12 +127,7 @@ p{
         font-size: 3.5vw !important;
     }
 }
-.credit{
-    position: absolute;
-    bottom: 0;
-    right: 6vw;
-    font-size: 1vw;
-}
+
 .overlay {
     height: 100%;
     width: 0;

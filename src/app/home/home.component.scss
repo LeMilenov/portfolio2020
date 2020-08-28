@@ -1,12 +1,44 @@
-.main-container {
+.title{
+    position: relative;
+    top:25%;
+}
+.name-title{
+    font-size: 7vw;;
+    font-family: "Ivar Headline SemiBold", sans-serif;       
+    padding-bottom: 3vw; 
+    line-height: initial;
+}
+.home-container{
+    position: absolute;
+    text-align: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(156, 107, 107, 0.4);
+}
+.credit{
+    position: absolute;
+    bottom: 0;
+    right: 6vw;
+    font-size: 1vw;
 }
 
-.cool_name {
-    font-size: 8vw;
-    top: 50%;
-    left: 10%;
-    position: absolute;
+.jumbotron{
+    padding:0;
+    
 }
+.svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  .clipped {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top:0;
+    left:5%;
+    z-index:-1;
+    background: url('../../assets/pictures/backgrounds/dan-cristian-padure-WoZgy7ZwgBI-unsplash.jpg');
+    background-size: cover;
+    -webkit-clip-path: url(#my-clip-path);
+    clip-path: url(#my-clip-path);
+  }
