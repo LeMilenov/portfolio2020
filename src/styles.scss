@@ -4,8 +4,6 @@
 $accent : #ff0231;
 $background: rgb(255, 255, 255);
 $dominant-light: rgb(29, 179, 109);
-$dominant-medium: rgb(42, 141, 255);
-$dominant-medium-dark:#ff0231;
 $dominant-dark: #000000;
 //override bootstrap
 $body-bg: $background;
@@ -64,7 +62,7 @@ h1{
 }
 h2{
     text-align: left;
-    text-shadow: 2px 1px  $dominant-medium;
+    text-shadow: 2px 1px  $dominant-light;
 }
 h3{
     text-align: center;
@@ -83,7 +81,7 @@ h5{
     color:$dominant-dark;
 }
 p{
-    color:$dominant-medium;
+    color:$dominant-light;
     text-align: left;
 }
 
@@ -287,15 +285,15 @@ p{
     color:$accent;
 }
 .nav-items{
-    color:$dominant-medium
+    color:$dominant-light
 }
 .tab-pane{
     text-align: left;
     .dateLabel{
-        color:$dominant-medium-dark
+        color:$dominant-light
     }
     .tasks{
-        color:$dominant-medium;
+        color:$dominant-light;
     }
 
 }

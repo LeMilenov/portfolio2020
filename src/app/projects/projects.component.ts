@@ -17,5 +17,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
   }  
- 
+  openProject(num:number){
+    alert('num'+num);
+  }
 }
