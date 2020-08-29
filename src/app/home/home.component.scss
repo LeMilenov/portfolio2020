@@ -37,8 +37,8 @@
     top:0;
     left:5%;
     z-index:-1;
-    background: url('../../assets/pictures/backgrounds/dan-cristian-padure-WoZgy7ZwgBI-unsplash.jpg');
-    background-size: cover;
+    // background: url('../../assets/pictures/backgrounds/dan-cristian-padure-WoZgy7ZwgBI-unsplash.jpg');
+    background-size: cover !important;
     -webkit-clip-path: url(#my-clip-path);
     clip-path: url(#my-clip-path);
   }
