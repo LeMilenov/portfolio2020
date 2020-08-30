@@ -34,8 +34,9 @@
     width: 90%;
     height: 80%;
     position: absolute;
-    top:0;
-    left:5%;
+    top:-5%;
+    left:0;
+    opacity: 0;
     z-index:-1;
     // background: url('../../assets/pictures/backgrounds/dan-cristian-padure-WoZgy7ZwgBI-unsplash.jpg');
     background-size: cover !important;
