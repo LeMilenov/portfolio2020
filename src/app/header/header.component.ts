@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-header',
@@ -14,15 +15,28 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   openNav() {
-    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.width = "50%";
+    anime({
+      targets:'#dark-screen',
+      opacity:1,
+      duration:100,
+      easing:'linear',
+      autoplay:true
+    });
   }
   
   closeNav() {
     document.getElementById("myNav").style.width = "0%";
+    anime({
+      targets:'#dark-screen',
+      opacity:0,
+      duration:100,
+      easing:'linear',
+      autoplay:true
+    });
   }
   openContact(){
     

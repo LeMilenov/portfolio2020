@@ -139,7 +139,12 @@ p{
     overflow-x: hidden;
     transition: 0.2s;
 }
-
+.dark{
+    background-color: $dominant-dark;
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+}
 .overlay-content {
     position: relative;
     top: 25%;

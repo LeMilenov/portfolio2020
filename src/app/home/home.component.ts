@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
     animation.add({
       targets: "#background",
       opacity: 1,
-      duration: 1000,
+      duration: 500,
           
     })
     //change path
@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit {
     })
     //fade background
     .add({
-      duration: 1000,
+      duration: 500,
       targets: "#background",
       opacity: 0, 
     });
