@@ -7,6 +7,7 @@
     font-family: "Ivar Headline SemiBold", sans-serif;       
     padding-bottom: 3vw; 
     line-height: initial;
+    text-shadow: 3px 3px white;
 }
 .home-container{
     position: absolute;
@@ -36,7 +37,7 @@
     position: absolute;
     top:-5%;
     left:0;
-    opacity: 0;
+    opacity: 1;
     z-index:-1;
     // background: url('../../assets/pictures/backgrounds/dan-cristian-padure-WoZgy7ZwgBI-unsplash.jpg');
     background-size: cover !important;

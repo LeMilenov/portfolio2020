@@ -1,4 +1,4 @@
-import { Component,     OnInit,     Output,     EventEmitter } from '@angular/core';
+import { Component,     OnInit,     Output,     EventEmitter, HostListener } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
 
 @Component({
@@ -24,13 +24,18 @@ export class HomeComponent implements OnInit {
   private TIME_TO_WAIT_BETWEEN_ANIMATIONS = 8000;
   private selectedSvg:number = -1;
   public backgroundName = this.backgrounds[0];
+  public positionX =0;
+  public positionY =0;
   constructor() {}
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngAfterViewInit() {
     this.startLoop();
   }
-
+  
+  /**
+   * start the infinite loop
+   */
   private startLoop(){
 
     this.changePath();
@@ -42,6 +47,9 @@ export class HomeComponent implements OnInit {
       this.startLoop();
     },this.TIME_TO_WAIT_BETWEEN_ANIMATIONS);
   }
+  /**
+   * create the moving animation
+   */
   private createAnimation():any{
     var animation = anime.timeline({
       easing:'linear',
@@ -69,7 +77,10 @@ export class HomeComponent implements OnInit {
     return animation;
 
   }
-
+  
+  /**
+   * choose a new random path
+   */
   private changePath(){
     var random = Math.floor(Math.random() * (this.svg.length));
     // if its the same as the selected, we keep searching
@@ -79,12 +90,20 @@ export class HomeComponent implements OnInit {
     //we set it as the new value
     this.selectedSvg = random;
   }
- 
+   /**
+    * chooose a new random background
+    */
   private changeBackground(){
      //load new background 
     var random = Math.floor(Math.random() * (this.backgrounds.length));
     this.backgroundName = this.backgrounds[random];   
   }
-  
-  
+  /**
+   * add event handling to the mouse
+   */
+  @HostListener('document:mousemove', ['$event']) 
+  onMouseMove(e){
+    this.positionX = (window.innerWidth / 2 - e.x) / 20;
+    this.positionY = e.y / 20;
+  }
 }
