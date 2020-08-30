@@ -21,7 +21,8 @@ export class HeaderComponent implements OnInit {
     document.getElementById("myNav").style.width = "50%";
     anime({
       targets:'#dark-screen',
-      opacity:1,
+      opacity:0.8,
+      zIndex: 1,
       duration:100,
       easing:'linear',
       autoplay:true
@@ -33,6 +34,7 @@ export class HeaderComponent implements OnInit {
     anime({
       targets:'#dark-screen',
       opacity:0,
+      zIndex: -1,
       duration:100,
       easing:'linear',
       autoplay:true

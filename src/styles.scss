@@ -63,8 +63,8 @@ h1{
     margin-bottom: 4vh;
 }
 h2{
-    text-align: left;
-    text-shadow: 2px 1px  $dominant-medium;
+    text-align: center;
+    text-shadow: 2px 1px  $background;
 }
 h3{
     text-align: center;
@@ -147,18 +147,18 @@ p{
 }
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10vw;
 }
 
 .overlay a {
-    padding: 8px;
+    // padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 4vw;
     color: $dominant-light;
-    display: block;
+    // display: block;
     transition: 0.3s;
 }
 
@@ -212,6 +212,8 @@ p{
     // margin-top: 3vh;
     //gets overwritten by overlay
     font-size: 2vh !important;
+    border: 3px solid $dominant-light;
+
 }
 
 .resumeBtn:hover{
@@ -228,11 +230,10 @@ p{
 }
 .icons {
     display: inline-flex;
-    padding-top: 4vh;
+    flex-flow: column;
 }
 
 .icon-link {
-    margin-right: 6vw;
     width: 25%;
 }
 
@@ -351,11 +352,13 @@ fieldset:disabled{
 }
 .only-mobile{
     display: none !important;
+    border:2px solid $dominant-light;
 }
   // mobile css
 @media screen and (max-width: 600px) {
     .overlay a {
-        font-size: 6vh;
+        font-size: 5vh;
+        display:block;
     }
     .overlay .closebtn {
         font-size: 40px;
