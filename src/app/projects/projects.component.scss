@@ -4,7 +4,30 @@
 }
 
 .content > mat-card { 
-    width: 200px; 
+    width: 300px; 
     margin-bottom: 16px;
-
+}
+.mat-card{
+    background:inherit;
+    color:inherit;
+    cursor: pointer;
+}
+.mat-card-title{
+    text-align: left;
+}
+img{
+    filter: brightness(50%); 
+}
+.selected-card{
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,1), 
+    0 1px 1px 0 rgba(0,0,0,1), 
+    0 1px 3px 0 rgba(0,0,0,1);
+    background-color: rgb(29, 179, 109);
+    color:white;
+    p{
+        color:white;
+    }
+    img{
+        filter: brightness(100%); 
+    }
 }

@@ -18,7 +18,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatButtonModule } from "@angular/material/button";
-
+import { MaterialElevationDirective } from './material-elevation.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +29,7 @@ import { MatButtonModule } from "@angular/material/button";
     FooterComponent,
     SafePipe,
     ProjectComponent,
+    MaterialElevationDirective
   ],
   imports: [
     BrowserModule,
