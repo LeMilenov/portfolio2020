@@ -8,7 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+
 import { SafePipe } from './safe.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
@@ -19,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatButtonModule } from "@angular/material/button";
 import { MaterialElevationDirective } from './material-elevation.directive';
+import {SlideshowModule} from 'ng-simple-slideshow';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,6 @@ import { MaterialElevationDirective } from './material-elevation.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule,
     BrowserAnimationsModule,
     MatRadioModule,
     FormsModule,
@@ -42,6 +43,7 @@ import { MaterialElevationDirective } from './material-elevation.directive';
     MatCardModule,
     FlexLayoutModule,    
     MatButtonModule,
+    SlideshowModule,
   ],
   exports:[
     MatRadioModule
@@ -50,4 +52,5 @@ import { MaterialElevationDirective } from './material-elevation.directive';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

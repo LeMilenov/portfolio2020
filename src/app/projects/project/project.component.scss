@@ -5,4 +5,48 @@
 .description{
     width: 50%;
     text-align: left;
+    font-size:3vh;
+}
+.jumbotron{
+    position: relative;
+}
+.go-back{
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    font-size: 5vh;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+.icon-container{
+    display: grid;
+    place-items: center;
+    height: 50vh;
+}
+.fa-eye-slash{
+    color: grey;
+    text-decoration: none;   
+}
+.check-links-section{
+    display: inline-flex;
+    font-size: 6vh;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+@media screen and (max-width: 600px) {
+    .description{
+        width:100%;
+    }
+   .project_container{
+       display: inline-block;
+   }
+   .check-links-section{
+       display: block;
+       font-size: 10vh;
+       left: 80%;
+   }
+   
 }
