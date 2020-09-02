@@ -31,3 +31,15 @@ img{
         filter: brightness(100%); 
     }
 }
+.jumbotron{
+    position: relative;
+}
+.go-back{
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    font-size: 5vh;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
