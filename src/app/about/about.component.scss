@@ -11,9 +11,23 @@
     cursor: pointer;
 }
 .info-container{
-    width: 50%;
+    width: 100%;
     text-align: left;
     border: 1px dotted;
     margin: 2vh;
     padding: 2vh;
+}
+ul{
+    list-style-type: none;
+    display: block;
+    position: relative;
+}
+.date{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+h4,h5 {
+    padding-left: 2vw;
+    font-style: italic;
 }
