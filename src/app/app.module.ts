@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { SafePipe } from './safe.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {MatRadioModule} from '@angular/material/radio';
 import { ProjectComponent } from './projects/project/project.component';
 import { FormsModule } from '@angular/forms';

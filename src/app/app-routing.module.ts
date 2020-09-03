@@ -17,8 +17,8 @@ const routerOptions: ExtraOptions = {
   scrollOffset: [0, 64],
 };
 const routes: Routes = [
-  {path: 'About', component: AboutComponent},
-  {path: 'Projects', component: ProjectsComponent},
+  {path: 'About', component: AboutComponent, data: {animation: 'isLeft'}},
+  {path: 'Projects', component: ProjectsComponent, data : {animation: 'isRight'}},
   {path: 'Projects/:id', component: ProjectComponent},
   {path: '', component: HomeComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'},
