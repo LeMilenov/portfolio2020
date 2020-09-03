@@ -13,7 +13,7 @@
 .info-container{
     width: 100%;
     text-align: left;
-    border: 1px dotted;
+    border: 1px solid;
     margin: 2vh;
     padding: 2vh;
 }
@@ -22,12 +22,36 @@ ul{
     display: block;
     position: relative;
 }
-.date{
-    position: absolute;
-    right: 0;
-    top:0;
-}
+
 h4,h5 {
     padding-left: 2vw;
     font-style: italic;
+}
+.icon-container{
+    width: 100%;
+    div{
+        text-align: center;
+        padding: 2vw;
+        background-color: #acadac63;
+        width: 100%;
+    }
+}
+.tasks{
+    background-color:#acadac63;
+}
+@media screen and (min-width: 768px) {
+    .date{
+        position: absolute;
+        right: 0;
+        top:0;
+    }
+    .icon-container{
+        display: inline-flex;
+        div:not(:first-child){            
+            border-left: 3px solid
+        }        
+        div{
+            width: 25%;
+        }
+    }
 }

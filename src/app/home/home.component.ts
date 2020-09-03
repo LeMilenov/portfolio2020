@@ -96,6 +96,9 @@ export class HomeComponent implements OnInit {
   private changeBackground(){
      //load new background 
     var random = Math.floor(Math.random() * (this.backgrounds.length));
+    while(this.backgrounds[random]== this.backgroundName){
+      random = Math.floor(Math.random() * (this.backgrounds.length));
+    }
     this.backgroundName = this.backgrounds[random];   
   }
   /**
