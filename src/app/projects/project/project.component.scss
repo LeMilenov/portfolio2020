@@ -30,10 +30,12 @@
 }
 .check-links-section{
     display: inline-flex;
-    font-size: 6vh;
+    font-size: 7vh;
     position: absolute;
     bottom: 0;
-    left: 25%;
+    width: 100%;
+    right: 0;
+    padding-left: 25%;
 }
 @media screen and (max-width: 600px) {
     .description{
@@ -44,7 +46,7 @@
    }
    .check-links-section{
        display: block;
-       font-size: 10vh;
+       font-size: 7vh;
        left: 80%;
        top: 0;
    }
