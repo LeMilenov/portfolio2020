@@ -112,6 +112,8 @@ export class HomeComponent implements OnInit {
       random = Math.floor(Math.random() * (this.backgrounds.length));
     }
     this.backgroundName = this.backgrounds[random];   
+    //change background 
+    document.getElementById("background").style.background = 'url(../../assets/pictures/backgrounds/'+this.backgroundName + ')';
   }
   /**
    * add event handling to the mouse
