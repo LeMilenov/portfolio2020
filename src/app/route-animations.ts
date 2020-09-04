@@ -6,49 +6,27 @@ import {
     transition,
     query,
     group,
-    // ...
   } from '@angular/animations';
 
-//   export const fader = 
-//       trigger('routeAnimations', [
-//           transition('* <=> *',[
-//             query(':enter, :leave', [
-//                 style({
-//                     position:'absolute',
-//                     left:0,
-//                     width: '100%',
-//                     opacity: 0,
-//                     transform: 'scale(0) translateY(100%)',
-//                 })
-//             ], { optional: true }),
-//             query(':enter',[
-//                 animate('600ms ease',
-//                     style({
-//                         opacity: 1, transform: 'scale(1) translateY(0)'
-//                     })
-//                 ),
-  
-//             ], { optional: true })
-//           ]),
-          
-//       ]);
       export const slider =
       trigger('routeAnimations', [
-        transition('* => isLeft', slideTo('left') ),
-        transition('* => isRight', slideTo('right') ),
+        transition('isRight => isFarRight', slideTo('right') ),
+        transition('isFarRight => isRight', slideTo('left','isFarRight') ),
         transition('isRight => *', slideTo('left') ),
-        transition('isLeft => *', slideTo('right') )
+        transition('isLeft => *', slideTo('right') ),
+        transition('* => isLeft', slideTo('left') ),
+        transition('* => isRight', slideTo('right') )
       ]);
     
-    function slideTo(direction) {
+    function slideTo(direction, name?) {
       const optional = { optional: true };
       return [
         query(':enter, :leave', [
           style({
-            position: 'absolute',
+            position: 'relative',
             top: 0,
             [direction]: 0,
-            width: '100%'
+            width: '100%',           
           })
         ], optional),
         query(':enter', [
@@ -56,10 +34,10 @@ import {
         ]),
         group([
           query(':leave', [
-            animate('600ms ease', style({ [direction]: '100%'}))
+            animate('600ms ease-out', style({ [direction]: '100%' }))
           ], optional),
           query(':enter', [
-            animate('600ms ease', style({ [direction]: '0%'}))
+            animate('600ms ease-out', style({ [direction]: '0%'}))
           ])
         ]),
         // Normalize the page style... Might not be necessary

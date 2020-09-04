@@ -19,7 +19,7 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
   {path: 'About', component: AboutComponent, data: {animation: 'isLeft'}},
   {path: 'Projects', component: ProjectsComponent, data : {animation: 'isRight'}},
-  {path: 'Projects/:id', component: ProjectComponent},
+  {path: 'Projects/:id', component: ProjectComponent, data: {animation: 'isFarRight'}},
   {path: '', component: HomeComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'},
 ];

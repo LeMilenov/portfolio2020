@@ -26,11 +26,20 @@ export class HomeComponent implements OnInit {
   public backgroundName = this.backgrounds[0];
   public positionX =0;
   public positionY =0;
+  private mainAnimation = null;
+  private timeout = null;
   constructor() {}
   ngOnInit() { }
 
   ngAfterViewInit() {
     this.startLoop();
+  }
+  ngOnDestroy(){
+    // this.mainAnimation.pause();
+    if(this.mainAnimation){
+      this.mainAnimation = null;
+      clearTimeout(this.timeout);
+    }
   }
   
   /**
@@ -39,11 +48,14 @@ export class HomeComponent implements OnInit {
   private startLoop(){
 
     this.changePath();
-    this.changeBackground();
-    var animation = this.createAnimation();
-    animation.play();
+    this.changeBackground();    
+    this.mainAnimation = this.createAnimation();
+    
+    if(this.timeout){
+      clearTimeout(this.timeout);
+    }
 
-    setTimeout(()=>{
+    this.timeout = setTimeout(()=>{
       this.startLoop();
     },this.TIME_TO_WAIT_BETWEEN_ANIMATIONS);
   }
@@ -51,12 +63,12 @@ export class HomeComponent implements OnInit {
    * create the moving animation
    */
   private createAnimation():any{
-    var animation = anime.timeline({
+    return  anime.timeline({
       easing:'linear',
-      autoplay:false
-    });
+      autoplay:true
+    })
     //fade in background
-    animation.add({
+    .add({
       targets: "#background",
       opacity: 1,
       duration: 500,
@@ -74,7 +86,7 @@ export class HomeComponent implements OnInit {
       targets: "#background",
       opacity: 0, 
     });
-    return animation;
+    
 
   }
   
