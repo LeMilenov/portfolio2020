@@ -15,11 +15,11 @@ export class ProjectComponent implements OnInit {
     { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56789263/akrales_170919_1976_0104.0.jpg', caption: 'Apple TV', href: 'https://www.apple.com/' },
     'https://cdn.vox-cdn.com/uploads/chorus_image/image/56674755/mr_pb_is_the_best.0.jpg',
     { url: '../../../assets/pictures/backgrounds/pawel-czerwinski-b7ibFp72VAg-unsplash.jpg', backgroundSize: 'contain', backgroundPosition: 'center' }
-    ];
+  ];
+
   ngOnInit() {
   }
   stuff(){
-    alert('done');
   }
 
 }
