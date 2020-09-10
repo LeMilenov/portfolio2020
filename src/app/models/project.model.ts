@@ -6,6 +6,9 @@ export interface Project{
     imageUrls: IImage[];
     icons: string[];
     desc:string;
+    tags: string[];
     githubLink:string;
-    websiteLinnk?:string;
+    fastDesc?:string;
+    preview?: string;
+    websiteLink?:string;
 }

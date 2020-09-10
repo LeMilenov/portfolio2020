@@ -11,6 +11,10 @@
     background:inherit;
     color:inherit;
     cursor: pointer;
+    height: 100%;
+}
+.mat-card-image{
+    height: 80%;
 }
 .mat-card-title{
     text-align: left;

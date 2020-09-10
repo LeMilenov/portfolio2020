@@ -9,6 +9,7 @@ export class DataService {
     {
       id:1,
       title: "AQTR - website",
+      tags:["web"],      
       imageUrls:[       
           { url: '../../../assets/pictures/aqtr/aqtr_0.png', caption: 'dashboard'},
           { url: '../../../assets/pictures/aqtr/aqtr_1.png', caption: 'event dashboard'},
@@ -30,14 +31,15 @@ export class DataService {
         "../../../assets/icons/github.png",
         "../../../assets/icons/sql.png",
       ],
-      desc:"",
+      fastDesc:"fast asidasdasd",
+      desc:" description ppppppeeee peee",
       githubLink:null,
-      websiteLinnk:"https://endirect.aqtr.com/"
+      websiteLink:"https://endirect.aqtr.com/"
     },
-    //https://www.youtube.com/watch?time_continue=4&v=qUG0yaJ42yI&feature=emb_logo
     {
       id:2,
       title: "One Pixel Remaining",
+      tags:["game","unity"],      
       imageUrls:[       
           { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_0.png', caption: 'dashboard'},
           { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_1.png', caption: 'event dashboard'},
@@ -53,13 +55,16 @@ export class DataService {
       icons:[
         "../../../assets/icons/unity.png"
       ],
-      desc:"",
+      fastDesc:"fast asidasdasd",
+      desc:"asdhoiasjdoijasiojdoijaosijdoiajoid",
+      preview:"https://www.youtube.com/watch?v=qUG0yaJ42yI&feature=emb_logo",
       githubLink:null,
-      websiteLinnk:"https://williamlebel.itch.io/one-pixel-remaining"
+      websiteLink:"https://williamlebel.itch.io/one-pixel-remaining"
     },
     {
       id:3,
       title: "Mad Scare - unity horror game",
+      tags:["game","unity"],      
       imageUrls:[       
           { url: '../../../assets/pictures/madScare/madScare_0.png', caption: 'dashboard'},
           { url: '../../../assets/pictures/madScare/madScare_1.png', caption: 'event dashboard'},
@@ -75,17 +80,48 @@ export class DataService {
       icons:[
         "../../../assets/icons/unity.png"
       ],
-      desc:"",
+      fastDesc:"fast asidasdasd",
+      desc:" ajsoidjoiasdjoajsdoijoiasjodijoiajs ",
       githubLink:null,
-      websiteLinnk:"https://williamlebel.itch.io/one-pixel-remaining"
+      websiteLink:"https://williamlebel.itch.io/one-pixel-remaining"
+    },
+    {
+      id:4,
+      title: "Anarchie - Creative Jam 2020",
+      tags:["game","unreal"],      
+      imageUrls:[       
+          { url: '../../../assets/pictures/madScare/madScare_0.png', caption: 'dashboard'},
+          { url: '../../../assets/pictures/madScare/madScare_1.png', caption: 'event dashboard'},
+          { url: '../../../assets/pictures/madScare/madScare_2.png', caption: 'menu'},
+          { url: '../../../assets/pictures/madScare/madScare_3.png', caption: 'programmation dashboard'},
+          { url: '../../../assets/pictures/madScare/madScare_4.png', caption: 'conference information'},
+          { url: '../../../assets/pictures/madScare/madScare_5.png', caption: 'sponsors dashboard'},
+          { url: '../../../assets/pictures/madScare/madScare_6.png', caption: 'sponsor information'},
+          { url: '../../../assets/pictures/madScare/madScare_7.png', caption: 'menu - when logged in'},
+          { url: '../../../assets/pictures/madScare/madScare_8.png', caption: 'favorite contacts'},
+          { url: '../../../assets/pictures/madScare/madScare_9.png', caption: 'contact information'},
+      ],
+      icons:[
+        "../../../assets/icons/unreal.png"
+      ],
+      desc:" asdoiasjoidjioajsoidjoiasjodi ",
+      githubLink:null,
+      websiteLink:"https://lemilenov.itch.io/anar-chie"
     },
     
        
   ];
   
 
-  ngOnInit(): void {
-    
+
+  public getProjects(){
+    return this.projects;
+  }
+  public getProjectById(id:number){
+    const project = this.projects.find((element:Project)=>{
+      return element.id == id;
+    });
+    return project ? project : null;
   }
 }
 

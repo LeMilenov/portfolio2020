@@ -417,6 +417,9 @@ fieldset:disabled{
 // }
 .slideshow-container{
     height: 50vh !important;
+    a{
+        background-size: contain !important;
+    }
 }
 .arrow-container{
     z-index: 0 !important;

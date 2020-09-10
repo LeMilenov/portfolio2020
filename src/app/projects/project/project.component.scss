@@ -23,8 +23,9 @@
     display: grid;
     place-items: center;
     height: 50vh;
+    margin-bottom: 10vh;
 }
-.fa-eye-slash{
+.disabled{
     color: grey;
     text-decoration: none;   
 }

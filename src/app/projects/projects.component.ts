@@ -14,8 +14,10 @@ export class ProjectsComponent implements OnInit {
     private data: DataService,
     private route :ActivatedRoute,
     public dialog: MatDialog ) { }
+  public projects = null;
 
   ngOnInit() {
+    this.projects = this.data.getProjects();
   }  
  
 }

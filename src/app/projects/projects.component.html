@@ -5,13 +5,13 @@
   <br>
   
   <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex.lg="33%" fxFlex.md="50%"  *ngFor="let num of [1,2,3,4,5,6]">
-      <mat-card appMaterialElevation raisedElevation="16" routerLink="/Projects/{{num}}">
-        <img alt="" mat-card-image src="../../assets/pictures/backgrounds/pawel-czerwinski-b7ibFp72VAg-unsplash.jpg" />
+    <div fxFlex.lg="33%" fxFlex.md="50%"  *ngFor="let project of projects">
+      <mat-card appMaterialElevation raisedElevation="16" routerLink="/Projects/{{project.id}}">
+        <img [alt]="project.imageUrls[0]['caption']" mat-card-image [src]="project.imageUrls[0]['url']" />
         <mat-card-content>
-          <mat-card-title>Mountains {{num}}</mat-card-title>
+          <mat-card-title>{{project.title}}</mat-card-title>
           <p>
-            technologie utilisees 
+            {{project.fastDesc}}
           </p>
         </mat-card-content>
       </mat-card>
