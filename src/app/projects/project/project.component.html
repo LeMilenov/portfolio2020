@@ -1,39 +1,53 @@
 <div class="jumbotron ">
-  <i class="go-back fa fa-arrow-circle-left" aria-hidden="true"  routerLink="/Projects"></i>
-<section>
-  <h1> {{title}} </h1>
-  <slideshow [imageUrls]="imageUrls"></slideshow>
-  <div class="project_container">
-    <div class="description" >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
-    <div style="width: 50%; position:relative">
-      <div class="icon-container">
-        <img alt="" class="icon" src="../../../assets/icons/android.png">
-        <img alt="" class="icon" src="../../../assets/icons/swift.png">
-        <img alt="" class="icon" src="../../../assets/icons/angularjs.png">
-        <img alt="" class="icon" src="../../../assets/icons/c++.png">
-        <img alt="" class="icon" src="../../../assets/icons/unity.png">
-      </div>
-      <br>
-      <br>
-      <div class="check-links-section"> 
-                
-        <!-- {{githubLink}} -->
-        <ul>
-          <a href="https://github.com/LeMilenov/{{title}}"  class="fa fa-github icon-link"  target="_blank "></a>
-        </ul>
-        <!-- {{website link}} -->
-        <ul>
-          <a  *ngIf="websiteLink != null; else disabled" href="{{websiteLink}}" class="fa fa-eye icon-link"  target="_blank "></a>
-        </ul>
-      </div>  
-    </div>
-  </div>
+  <i class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></i>
+  <section>
+    <h1> {{title}} </h1>
+    <slideshow [imageUrls]="imageUrls"></slideshow>
+    <!-- PREVIEW -->
+    <iframe [src]='safeURL' height="167" width="552" frameborder="0" allowfullscreen>
+      <!-- <a href="https://williamlebel.itch.io/one-pixel-remaining">One Pixel Remaining by WilliamLebel, LeMilenov,Johnytech6</a> -->
+    </iframe>
 
-</section>
+    <div class="project_container">
+      <div class="description">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+        dolor sit amet.
+      </div>
+      <div style="width: 50%; position:relative">
+        <div class="icon-container">
+          <img alt="" class="icon" src="../../../assets/icons/android.png">
+          <img alt="" class="icon" src="../../../assets/icons/swift.png">
+          <img alt="" class="icon" src="../../../assets/icons/angularjs.png">
+          <img alt="" class="icon" src="../../../assets/icons/c++.png">
+          <img alt="" class="icon" src="../../../assets/icons/unity.png">
+        </div>
+        <br>
+        <br>
+        <div class="check-links-section">
+
+          <!-- {{githubLink}} -->
+          <ul>
+            <a href="https://github.com/LeMilenov/{{title}}" class="fa fa-github icon-link" target="_blank "></a>
+          </ul>
+          <!-- {{website link}} -->
+          <ul>
+            <a *ngIf="websiteLink != null; else disabled" href="{{websiteLink}}" class="fa fa-eye icon-link"
+              target="_blank "></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
 </div>
 
 <ng-template #disabled>
-  <a class="fa fa-eye-slash icon-link" ></a>      
+  <a class="fa fa-eye-slash icon-link"></a>
 </ng-template>
