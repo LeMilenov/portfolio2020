@@ -3,7 +3,7 @@
 //custom colors
 $accent : #ff0231;
 $background: rgb(255, 255, 255);
-$dominant-light: rgb(29, 179, 109);
+$dominant-light: rgb(0, 0, 0);
 $dominant-dark: #000000;
 //override bootstrap
 $body-bg: $background;
@@ -351,7 +351,9 @@ fieldset:disabled{
 }
 .only-mobile{
     display: none !important;
-    border:2px solid $dominant-light;
+}
+.is-active{
+    color:$accent !important;
 }
   // mobile css
 @media screen and (max-width: 600px) {
@@ -379,6 +381,9 @@ fieldset:disabled{
     }
     .only-mobile{
         display:block !important;
+    }
+    .only-desktop{
+        display:none !important;
     }
 }
 // OVERRIDE BOOTSTRAP NAV FOR HEADER

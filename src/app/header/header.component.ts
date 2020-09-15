@@ -18,7 +18,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   openNav() {
-    document.getElementById("myNav").style.width = "50%";
+    let width = (screen.width <= 600) ? "50%": "25%";
+    //if mobile
+    
+    document.getElementById("myNav").style.width = width;
     anime({
       targets:'#dark-screen',
       opacity:0.8,
