@@ -124,6 +124,10 @@ p{
         color:$background;
         font-size: 3.5vw !important;
     }
+    a:hover{
+        background:$accent;
+        border:15px solid $accent;
+    }
 }
 
 .overlay {

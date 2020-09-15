@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
     'M0.078,0.896 C0,0.764,0.291,0.367,0.227,0.233 S-0.046,-0.239,0.292,0.055 S0.538,0.12,0.652,0 S0.944,0.235,0.966,0.374 S1,0.277,1,0.487 S0.816,1,0.462,0.826 S0.157,1,0.078,0.896'
   ]
   private backgrounds = [
-    'dan-cristian-padure-WoZgy7ZwgBI-unsplash.jpg',
-    'pawel-czerwinski-b7ibFp72VAg-unsplash.jpg',
-    'pawel-czerwinski-oykbZuvajO0-unsplash.jpg',
+    'pawel-czerwinski-cx90ak4WBFQ-unsplash.jpg',
+    'pawel-czerwinski-p_puv4_2RIQ-unsplash.jpg',
     'pawel-czerwinski-rsB6JZg6rVs-unsplash.jpg',
-    'pawel-czerwinski-rsB6JZg6rVs-unsplash.jpg'
+    'pawel-czerwinski-wtljKRoxsZE-unsplash.jpg',
+    'pawel-czerwinski-wZWnTktk0ow-unsplash.jpg'
   ]
   private TIME_TO_WAIT_BETWEEN_ANIMATIONS = 8000;
   private selectedSvg:number = -1;
@@ -120,7 +120,9 @@ export class HomeComponent implements OnInit {
    */
   @HostListener('document:mousemove', ['$event']) 
   onMouseMove(e){
-    this.positionX = (window.innerWidth / 2 - e.x) / 20;
-    this.positionY = e.y / 20;
+    const offSetX = 100;
+    const offSetY = -100; 
+    this.positionX = (window.innerWidth / 3 - e.x) / 20 + offSetX;
+    this.positionY = e.y / 20 + offSetY;
   }
 }
