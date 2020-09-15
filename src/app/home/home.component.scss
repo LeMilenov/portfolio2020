@@ -4,7 +4,7 @@
 }
 .name-title{
     font-size: 7vw;;
-    font-family: "Ivar Headline SemiBold", sans-serif;       
+    // font-family: "Ivar Headline SemiBold", sans-serif;       
     padding-bottom: 3vw; 
     line-height: initial;
     text-shadow: 3px 3px white;
@@ -19,7 +19,10 @@
     position: absolute;
     bottom: 0;
     right: 6vw;
-    font-size: 1vw;
+    font-size: 1vw !important;
+    a{
+        font-size : 1vw !important
+    }
 }
 
 .jumbotron{
