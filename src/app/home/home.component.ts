@@ -29,9 +29,20 @@ export class HomeComponent implements OnInit {
   private mainAnimation = null;
   private timeout = null;
   constructor() {}
-  ngOnInit() { }
+  ngOnInit() {
+
+  }
+
 
   ngAfterViewInit() {
+    anime({
+      targets:'.home-container',
+      opacity:1,
+      delay:1000,
+      duration:2000,
+      easing:'linear',
+      autoplay:true,
+    })
     this.startLoop();
   }
   ngOnDestroy(){

@@ -28,7 +28,6 @@ export class DataService {
         "../../../assets/icons/javascript.png",
         "../../../assets/icons/sass.png",
         "../../../assets/icons/docker.png",
-        "../../../assets/icons/github.png",
         "../../../assets/icons/sql.png",
       ],
       fastDesc:"fast asidasdasd",

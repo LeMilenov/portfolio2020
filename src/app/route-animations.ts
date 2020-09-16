@@ -11,22 +11,24 @@ import {
       export const slider =
       trigger('routeAnimations', [
         transition('isRight => isFarRight', slideTo('right') ),
-        transition('isFarRight => isRight', slideTo('left','isFarRight') ),
+        transition('isFarRight => isRight', slideTo('left') ),
         transition('isRight => *', slideTo('left') ),
         transition('isLeft => *', slideTo('right') ),
         transition('* => isLeft', slideTo('left') ),
         transition('* => isRight', slideTo('right') )
       ]);
     
-    function slideTo(direction, name?) {
+    function slideTo(direction) {
       const optional = { optional: true };
       return [
         query(':enter, :leave', [
           style({
             position: 'relative',
             top: 0,
+            opacity:0,
+            background:'red',
             [direction]: 0,
-            width: '100%',           
+            width: '50%',           
           })
         ], optional),
         query(':enter', [
@@ -40,8 +42,7 @@ import {
             animate('600ms ease-out', style({ [direction]: '0%'}))
           ])
         ]),
-        // Normalize the page style... Might not be necessary
-    
+        // Normalize the page style... Might not be necessary    
         // Required only if you have child animations on the page
         // query(':leave', animateChild()),
         // query(':enter', animateChild()),
