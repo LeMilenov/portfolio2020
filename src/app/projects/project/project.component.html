@@ -14,10 +14,7 @@
         <div class="icon-container">
           <img  *ngFor="let icon of project.icons" alt="" class="icon" [src]="icon">
         </div>
-        <br>
-        <br>
         <div class="check-links-section">
-
           <!-- {{githubLink}} -->
           <ul>
             <a *ngIf="project.githubLink != null; else disabledGit" [href]="project.githubLink" class="fa fa-github icon-link" target="_blank "></a>

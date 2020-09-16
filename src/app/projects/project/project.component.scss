@@ -6,6 +6,7 @@
     width: 50%;
     text-align: left;
     font-size:3vh;
+    padding:2vw;
 }
 .jumbotron{
     position: relative;
@@ -20,10 +21,13 @@
     cursor: pointer;
 }
 .icon-container{
-    display: grid;
-    place-items: center;
     height: 50vh;
-    margin-bottom: 10vh;
+    vertical-align: middle;
+    padding-left: 25%;
+    display: table-cell;
+    img{
+        width:5vh;
+    }
 }
 .disabled{
     color: grey;
@@ -42,6 +46,7 @@
 @media screen and (max-width: 600px) {
     .description{
         width:100%;
+        text-align: center;
     }
    .project_container{
        display: inline-block;
@@ -49,6 +54,7 @@
    .check-links-section{
        display: block;
        font-size: 7vh;
+       padding-top: 20%;
        left: 80%;
        top: 0;
    }
