@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 //custom colors
-$accent : #ff0231;
+// $accent : #ff004c;
+$accent: #1db36d;
 $background: rgb(255, 255, 255);
 $dominant-light: rgb(0, 0, 0);
 $dominant-dark: #000000;
+$highlight:#1db36d;
 //override bootstrap
 $body-bg: $background;
 $body-color: $dominant-light;
@@ -75,6 +77,10 @@ h5{
 .accent{
     color:$accent;
 }
+.highlight{
+    color:$highlight;
+    font-weight: bold;
+}
 .dominant-dark{
     color:$dominant-dark;
 }
@@ -92,6 +98,7 @@ p{
     overflow: auto; 
     overflow-x: hidden; 
     margin: 2vh 0;
+    padding:10vw;
     //smooth scroll
     overflow-y: scroll;
     scroll-behavior: smooth;
