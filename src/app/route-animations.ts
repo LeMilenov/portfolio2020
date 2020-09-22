@@ -1,6 +1,5 @@
 import {
     trigger,
-    state,
     style,
     animate,
     transition,
@@ -8,7 +7,7 @@ import {
     group,
   } from '@angular/animations';
 
-      export const slider =
+    export const slider =
       trigger('routeAnimations', [
         transition('isRight => isFarRight', slideTo('right') ),
         transition('isFarRight => isRight', slideTo('left') ),
@@ -18,7 +17,7 @@ import {
         transition('* => isRight', slideTo('right') )
       ]);
     
-    function slideTo(direction) {
+    function slideTo(direction:any) {
       const optional = { optional: true };
       return [
         query(':enter, :leave', [
@@ -41,10 +40,6 @@ import {
           query(':enter', [
             animate('600ms ease-out', style({ [direction]: '0%'}))
           ])
-        ]),
-        // Normalize the page style... Might not be necessary    
-        // Required only if you have child animations on the page
-        // query(':leave', animateChild()),
-        // query(':enter', animateChild()),
+        ])       
       ];
     }

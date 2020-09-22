@@ -4,7 +4,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Project } from '../../models/project.model';
 import { DataService } from '../../data.service';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -14,12 +13,13 @@ export class ProjectComponent implements OnInit {
 
   public project:Project = null;
   public imageUrls: (string | IImage)[] = null;
+  public safeURL = null;
 
   constructor(
     private data:DataService,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private _sanitizer: DomSanitizer
     ){
-    // this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/watch?time_continue=4&v=qUG0yaJ42yI&feature=emb_logo");
  }
   // imageUrls: (string | IImage)[] = [
   //   { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56748793/dbohn_170625_1801_0018.0.0.jpg', caption: 'The first slide', href: '#config' },
@@ -35,6 +35,9 @@ export class ProjectComponent implements OnInit {
       if(id > 0){
         this.project = this.data.getProjectById(id);  
         this.imageUrls = this.project.imageUrls; 
+        if(this.project.preview){
+          this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.project.preview);
+        }
       }
     });
   }

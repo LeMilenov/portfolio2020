@@ -2,7 +2,7 @@
   <a class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></a>
   <section *ngIf="project != null">
     <h1> {{project.title}} </h1>
-    <slideshow [imageUrls]="imageUrls"></slideshow>
+    <slideshow  [autoPlay]="true" [imageUrls]="imageUrls"></slideshow>
     <!-- PREVIEW -->
     
 
@@ -26,6 +26,7 @@
           </ul>
         </div>
       </div>
+      <iframe *ngIf="this.safeURL != null" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
     </div>
 
   </section>

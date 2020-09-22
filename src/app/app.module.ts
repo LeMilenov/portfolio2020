@@ -23,6 +23,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatButtonModule } from "@angular/material/button";
 import { MaterialElevationDirective } from './material-elevation.directive';
 import {SlideshowModule} from 'ng-simple-slideshow';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,7 @@ import {SlideshowModule} from 'ng-simple-slideshow';
   exports:[
     MatRadioModule
   ],
-  providers: [
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
