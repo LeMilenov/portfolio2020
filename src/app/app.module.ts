@@ -23,7 +23,6 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatButtonModule } from "@angular/material/button";
 import { MaterialElevationDirective } from './material-elevation.directive';
 import {SlideshowModule} from 'ng-simple-slideshow';
-import { AnimationOverlayComponent } from './animation-overlay/animation-overlay.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,8 +33,7 @@ import { AnimationOverlayComponent } from './animation-overlay/animation-overlay
     FooterComponent,
     SafePipe,
     ProjectComponent,
-    MaterialElevationDirective,
-    AnimationOverlayComponent
+    MaterialElevationDirective
   ],
   imports: [
     BrowserModule,
