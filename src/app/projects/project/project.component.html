@@ -7,8 +7,7 @@
     
 
     <div class="project_container">
-      <div class="description" >
-        {{project.desc}}
+      <div class="description" [innerHtml]="project.desc">
       </div>
       <div >
         <div class="icon-container">
@@ -26,8 +25,8 @@
           </ul>
         </div>
       </div>
-      <iframe *ngIf="this.safeURL != null" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
     </div>
+    <iframe *ngIf="this.safeURL != null" [src]='safeURL' frameborder="0" height="500px" width="50%"></iframe>
 
   </section>
 </div>

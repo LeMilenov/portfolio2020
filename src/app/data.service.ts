@@ -19,10 +19,10 @@ export class DataService {
         "../../../assets/icons/unreal.png"
       ],
       fastDesc:"winning game of the 2020`s cocoJam",
-      desc:"This game was made during the 2020 Cocojam event organised by  Concordia Game Development Club and Conjure, it was sponsered by Ubisoft, Ludia, Gameloft, Gearbox, Cyberconnect2 and Hekaton. \n Follow the eye icon to learn more about the game ! " ,
+      desc:'This game was made during the 2020 Cocojam event organised by Concordia Game Development Club and Conjure, it was sponsered by Ubisoft, Ludia, Gameloft, Gearbox, Cyberconnect2 and Hekaton. \n It was produced by the OogaBooga team composed of 4 programmers, 2 artists and a sound designer. \n Click the eye icon to learn more about the game and to try it out ! ' ,
       githubLink:null,
       websiteLink:"https://itch.io/jam/coco-jam/entries",
-      preview:"https://www.youtube.com/watch?v=xuGH7WzucS0"
+      preview:"https://www.youtube.com/embed/xuGH7WzucS0"
     },
     {
       id:4,
@@ -35,7 +35,7 @@ export class DataService {
       icons:[
         "../../../assets/icons/unreal.png"
       ],
-      desc:"Help Archie get his toilet paper roll before there are none left ! Anarchie was a game made during the Poly games and Nadjam`s Virtual Creative Jam 16th edition. ",
+      desc:"Anarchie was a game made in a team composed of 3 artists, a sound designer and 2 programmers during the Poly games and Nadjam`s Virtual Creative Jam 16th edition. \n Help Archie get his toilet paper roll before there are none left !  ",
       githubLink:null,
       websiteLink:"https://lemilenov.itch.io/anar-chie"
     },
@@ -52,10 +52,10 @@ export class DataService {
         "../../../assets/icons/unity.png"
       ],
       fastDesc:"Game made during Conjure`s monthly jam",
-      desc:"One pixel remaining was made during the monthly game jam of june 2020. The goal was to make a simple polished game in unity. It is a physics-based game where you have to move the platform in order to keep the pixel from the beam of lights. You can change the color of the pixel by clicking a combination of red(w key), green(d key) and blue(a key). how long can you last ?",
+      desc:"One pixel remaining was made during the monthly game jam of june 2020 in a team of 4. The goal was to make a simple polished game in unity. It is a physics-based game where you have to move the platform in order to keep the pixel from the beam of lights. You can change the color of the pixel by clicking a combination of red(w key), green(d key) and blue(a key). how long can you last ?",
       githubLink:null,
       websiteLink:"https://williamlebel.itch.io/one-pixel-remaining",
-      preview:"https://www.youtube.com/watch?v=qUG0yaJ42yI&feature=emb_logo",
+      preview:"https://www.youtube.com/embed/qUG0yaJ42yI",
     },
     {
       id:1,
