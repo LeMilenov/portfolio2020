@@ -365,7 +365,7 @@ fieldset:disabled{
     color:$accent !important;
 }
   // mobile css
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .overlay a {
         font-size: 5vh;
         display:block;
