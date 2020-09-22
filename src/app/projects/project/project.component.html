@@ -1,5 +1,5 @@
 <div class="jumbotron ">
-  <i class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></i>
+  <a class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></a>
   <section *ngIf="project != null">
     <h1> {{project.title}} </h1>
     <slideshow [imageUrls]="imageUrls"></slideshow>
