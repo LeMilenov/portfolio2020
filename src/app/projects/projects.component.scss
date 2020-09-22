@@ -1,6 +1,7 @@
 .content { 
     padding: 16px; 
     margin: 0 -16px -16px 16px !important;
+    display:block;
 }
 
 .content > mat-card { 
@@ -16,6 +17,7 @@
 .mat-card-image{
     height: 25vh;
 }
+
 .mat-card-title{
     text-align: left;
 }
@@ -46,4 +48,14 @@ img {
     outline: none;
     box-shadow: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .mat-card-image {
+        height: 20vh;
+    }
+    .content{
+        padding: 10vw;
+    }
+
 }

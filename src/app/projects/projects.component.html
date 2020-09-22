@@ -5,7 +5,7 @@
   <br>
   
   <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex.lg="33%" fxFlex.md="50%"  *ngFor="let project of projects">
+    <div fxFlex.xl="33%" fxFlex.lg="33%" fxFlex.md="50%" fxFlex.sm="50%"  *ngFor="let project of projects">
       <mat-card appMaterialElevation raisedElevation="16" routerLink="/Projects/{{project.id}}">
         <img [alt]="project.imageUrls[0]['caption']" mat-card-image [src]="project.imageUrls[0]['url']" />
         <mat-card-content>
