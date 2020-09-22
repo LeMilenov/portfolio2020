@@ -2,6 +2,9 @@
     width: 100%;
     display: flex;
 }
+.slideshow-container{
+    background-color: black !important;
+}
 .description{
     width: 50%;
     text-align: left;
@@ -21,10 +24,10 @@
     cursor: pointer;
 }
 .icon-container{
-    height: 50vh;
+    // height: 50vh;
     vertical-align: middle;
-    padding-left: 25%;
-    display: table-cell;
+    padding: 5vw;
+    // display: table-cell;
     img{
         width:5vh;
     }
@@ -36,7 +39,6 @@
 .check-links-section{
     display: inline-flex;
     font-size: 7vh;
-    position: absolute;
     bottom: 0;
     width: 100%;
     right: 0;
@@ -52,10 +54,7 @@
        display: inline-block;
    }
    .check-links-section{
-       display: block;
-       font-size: 7vh;
-       padding-top: 20%;
-       left: 80%;
-       top: 0;
+    font-size: 7vh;
+    padding-left: 0%;
    }
 }
