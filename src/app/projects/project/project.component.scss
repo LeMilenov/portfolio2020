@@ -6,10 +6,7 @@
     background-color: black !important;
 }
 .description{
-    width: 50%;
-    text-align: left;
-    font-size:3vh;
-    padding:2vw;
+    text-align: left;   
 }
 .jumbotron{
     position: relative;
@@ -39,10 +36,7 @@
 .check-links-section{
     display: inline-flex;
     font-size: 7vh;
-    bottom: 0;
-    width: 100%;
-    right: 0;
-    padding-left: 25%;
+    padding-right: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -61,4 +55,42 @@
     width: 100%;
     height: 30vh;
    }
+}
+
+
+#module div.collapse[aria-expanded="false"] {
+    display: block;
+    height: 50px !important;
+    overflow: hidden;
+}
+
+#module div.collapsing[aria-expanded="false"] {
+    height: 50px !important;
+}
+#module div.show[arie-expanded="false"]{
+    display: block;
+    height: 100% !important;
+    overflow: hidden;
+}
+
+#module #descriptionToggle.collapsed:after  {
+    content: '+ Show More';
+}
+
+#module #descriptionToggle:not(.collapsed):after {
+    content: '- Show Less';
+}
+.slideshow-container{
+    position: relative;
+    border-style: solid;
+}
+#innerShadow{
+    width: 100%;
+    height: 100%;
+    top: 3rem;
+    left: 3rem;
+    z-index: -1;
+    position: absolute;
+    background-color: white;
+    border-style: solid;
 }

@@ -1,34 +1,48 @@
-<div class="jumbotron ">
-  <a class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></a>
-  <section *ngIf="project != null">
-    <h1> {{project.title}} </h1>
-    <slideshow  [autoPlay]="true" [imageUrls]="imageUrls"></slideshow>
-    <!-- PREVIEW -->
-    
-
-    <div class="project_container">
-      <div class="description" [innerHtml]="project.desc">
+<!-- desktop -->
+<div class=" jumbotron jumbotron-fluid">
+  <div class="container-fluid">
+    <a class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></a>
+    <section *ngIf="project != null">
+      <div class="row">
+        <!-- Title -->
+        <h1> {{project.title}} </h1>
       </div>
-      <div >
-        <div class="icon-container">
-          <img  *ngFor="let icon of project.icons" alt="" class="icon" [src]="icon">
+      <div class="row">
+        <div class="col">
+          <div class="project-section" id="module">
+           <!-- Description -->
+            <p class="description " id="collapseDescription" [innerHtml]="project.desc">
+            </p>
+          </div>
+          <!-- Icons -->
+          <!-- TODO is it worth it ?? -->
+          <!-- <div class="icon-container">
+            <img  *ngFor="let icon of project.icons" alt="icon" class="icon" [src]="icon">
+          </div> -->
+          <div class="check-links-section ">
+            <!-- {{githubLink}} -->
+            <ul>
+              <a *ngIf="project.githubLink != null; else disabledGit" [href]="project.githubLink" class="fa fa-github icon-link" target="_blank "></a>
+            </ul>
+            <!-- {{website link}} -->
+            <ul>
+              <a *ngIf="project.websiteLink != null; else disabled" href="{{project.websiteLink}}" class="fa fa-eye icon-link"
+                target="_blank "></a>
+            </ul>
+          </div>
         </div>
-        <div class="check-links-section">
-          <!-- {{githubLink}} -->
-          <ul>
-            <a *ngIf="project.githubLink != null; else disabledGit" [href]="project.githubLink" class="fa fa-github icon-link" target="_blank "></a>
-          </ul>
-          <!-- {{website link}} -->
-          <ul>
-            <a *ngIf="project.websiteLink != null; else disabled" href="{{project.websiteLink}}" class="fa fa-eye icon-link"
-              target="_blank "></a>
-          </ul>
+        <div class="col">
+          <div class="slideshow-container" >
+            <slideshow  [autoPlay]="true" [imageUrls]="imageUrls"></slideshow> 
+            <div id="innerShadow"></div>      
+          </div>
         </div>
       </div>
-    </div>
-    <iframe *ngIf="this.safeURL != null" [src]='safeURL' frameborder="0" height="500px" width="50%"></iframe>
+      <!-- rajouter video dans le slideshow  -->
+      <!-- <iframe *ngIf="this.safeURL != null" [src]='safeURL' frameborder="0" height="500px" width="50%"></iframe>      -->
+    </section>
 
-  </section>
+  </div>
 </div>
 
 <ng-template #disabled>
@@ -37,3 +51,8 @@
 <ng-template #disabledGit>
   <a class="fa fa-github icon-link disabled"></a>
 </ng-template>
+<!-- mobile -->
+
+<!-- <div class="description collapse" id="collapseDescription" aria-expanded="false" [innerHtml]="project.desc">
+</div>
+<a id="descriptionToggle" role="button" class="collapsed" data-toggle="collapse" href="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription"></a> -->

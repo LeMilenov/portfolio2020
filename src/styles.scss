@@ -87,6 +87,7 @@ h5{
 p{
     color:$dominant-light;
     text-align: left;
+    font-size:1.5rem;
 }
 
 .jumbotron{
@@ -98,7 +99,7 @@ p{
     overflow: auto; 
     overflow-x: hidden; 
     margin: 2vh 0;
-    padding:10vw;
+    padding:8vw;
     //smooth scroll
     overflow-y: scroll;
     scroll-behavior: smooth;
