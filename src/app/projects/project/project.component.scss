@@ -92,26 +92,27 @@
        position: absolute;
        background-color: white;
        border-style: solid;
-   }
-   p{
-       font-size: medium;
-   }
-  
-  #module p.collapse[aria-expanded="false"] {
-      display: block;
-      height: 40px !important;
-      overflow: hidden;
-  }
-  
-  #module p.show[aria-expanded="false"] {
-    height: 100% !important;
+   }  
 }
 
-  #module a.collapsed:after  {
-      content: '+ Read More';
-  }
-  
-  #module a:not(.collapsed):after {
-      content: '- Read Less';
-  }
+p{
+    font-size: medium;
+}
+
+#module p.collapse[aria-expanded="false"] {
+   display: block;
+   height: 10vh !important;
+   overflow: hidden;
+}
+
+#module p.show[aria-expanded="false"] {
+ height: 100% !important;
+}
+
+#module a.collapsed:after  {
+   content: '+ Read More';
+}
+
+#module a:not(.collapsed):after {
+   content: '- Read Less';
 }

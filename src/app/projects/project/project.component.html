@@ -9,10 +9,12 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="project-section">
+          <div class="project-section" id="module">
            <!-- Description -->
-            <p class="description " id="collapseDescription" [innerHtml]="project.desc">
+            <p class="collapse" id="collapseExample" aria-expanded="false"  [innerHtml]="project.desc">
             </p>
+            <a role="button" class="collapsed btn btn-secondary btn-lg btn-block" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            </a>
           </div>
           <!-- Icons -->
           <!-- TODO is it worth it ?? -->
