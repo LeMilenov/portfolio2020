@@ -44,12 +44,15 @@ h6{
     div{
         text-align: center;
         padding: 2vw;
-        background-color: #C5DCFF;
+        background-color: #1db36d40;
         width: 25%;
     }
 }
+.nav-item.active{
+    background-color: #1db36d;
+}
 .tasks{
-    background-color:#C5DCFF;
+    background-color:#1db36d40;
 }
 .title-container{
     width: 100%;
