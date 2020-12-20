@@ -365,7 +365,7 @@ fieldset:disabled{
     color:$accent !important;
 }
   // mobile css
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .overlay a {
         font-size: 5vh;
         display:block;
@@ -432,12 +432,7 @@ fieldset:disabled{
 //         font-size: 5vw;
 //     }
 // }
-.slideshow-container{
-    height: 50vh !important;
-    a{
-        background-size: contain !important;
-    }
-}
+
 .arrow-container{
     z-index: 0 !important;
 }

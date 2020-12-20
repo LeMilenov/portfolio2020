@@ -1,9 +1,7 @@
+
 .project_container{
     width: 100%;
     display: flex;
-}
-.slideshow-container{
-    background-color: black !important;
 }
 .description{
     text-align: left;   
@@ -39,6 +37,33 @@
     padding-right: 100%;
 }
 
+
+
+
+
+.slideshow-container{
+    position: relative;
+    border-style: solid;
+    width: 100%;
+    height: 23vw !important;
+    a{
+        background-size: contain !important;
+        /* background-position: center center; */
+        background-repeat: no-repeat;
+    }
+}
+#innerShadow{
+    width: 100%;
+    height: 100%;
+    top: 3rem;
+    left: 3rem;
+    z-index: -1;
+    position: absolute;
+    background-color: white;
+    border-style: solid;
+}
+  
+    
 @media screen and (max-width: 600px) {
     .description{
         width:100%;
@@ -55,42 +80,38 @@
     width: 100%;
     height: 30vh;
    }
-}
-
-
-#module div.collapse[aria-expanded="false"] {
-    display: block;
-    height: 50px !important;
-    overflow: hidden;
-}
-
-#module div.collapsing[aria-expanded="false"] {
-    height: 50px !important;
-}
-#module div.show[arie-expanded="false"]{
-    display: block;
+   .slideshow-container{
+       height: 25vh !important;
+   }
+   #innerShadow{
+       width: 100%;
+       height: 100%;
+       top: 1rem;
+       left: 1rem;
+       z-index: -1;
+       position: absolute;
+       background-color: white;
+       border-style: solid;
+   }
+   p{
+       font-size: medium;
+   }
+  
+  #module p.collapse[aria-expanded="false"] {
+      display: block;
+      height: 40px !important;
+      overflow: hidden;
+  }
+  
+  #module p.show[aria-expanded="false"] {
     height: 100% !important;
-    overflow: hidden;
 }
 
-#module #descriptionToggle.collapsed:after  {
-    content: '+ Show More';
-}
-
-#module #descriptionToggle:not(.collapsed):after {
-    content: '- Show Less';
-}
-.slideshow-container{
-    position: relative;
-    border-style: solid;
-}
-#innerShadow{
-    width: 100%;
-    height: 100%;
-    top: 3rem;
-    left: 3rem;
-    z-index: -1;
-    position: absolute;
-    background-color: white;
-    border-style: solid;
+  #module a.collapsed:after  {
+      content: '+ Read More';
+  }
+  
+  #module a:not(.collapsed):after {
+      content: '- Read Less';
+  }
 }
