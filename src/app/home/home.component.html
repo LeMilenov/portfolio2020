@@ -8,14 +8,16 @@
                 <a routerLink="/Projects"> View all my projects</a>
             </div>
         </div>
-        <svg class="svg">
-            <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-                <path id="path-to-animate"
-                    d="M0.093,0.878 C0,0.736,0.194,0.698,0.118,0.555 S0.439,0.362,0.406,0.241 S0.951,0,0.808,0.177 S1,0.369,1,0.517 S0.862,0.641,0.846,0.866 S0.361,1,0.467,1 S0.186,1,0.093,0.878" />
-            </clipPath>
+        <div class="background" id="background" [style.top]="positionX+'px'" [style.left]="positionY+ 'px'" >
+            <div class="wave"></div>
+        </div>
+        <svg>
+            <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+                <feTurbulence id="wave-filter" type="fractalNoise" numOctaves="0.01" baseFrequency='0.01' result='noise'></feTurbulence>                
+                <feDisplacementMap scale="80" in="SourceGraphic"></feDisplacementMap>
+            </filter>
+            <animate xlink:href="#wave-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
         </svg>
-
-        <div class="clipped" id="background" [style.background-position]="positionX+'px '+positionY+ 'px'"></div>
     </div>
 
 
