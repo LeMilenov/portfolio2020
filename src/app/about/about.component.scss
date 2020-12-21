@@ -96,7 +96,9 @@ h6{
 }
 // when on mobile
 @media screen and (max-width: 768px) {
-    
+    .nav-item.active{
+        color:white;
+    }
     .date{
         position: relative;
     }
