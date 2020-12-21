@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <a class="go-back fa fa-arrow-circle-left" aria-hidden="true" routerLink="/Projects"></a>
     <section *ngIf="project != null">
-      <div class="row">
+      <div class="row" >
         <!-- Title -->
         <h1> {{project.title}} </h1>
       </div>
@@ -34,14 +34,12 @@
           </div>
         </div>
         <div class="col">
-          <div class="slideshow-container" >
+          <div class="slideshow-container " >
             <slideshow  [autoPlay]="false" [imageUrls]="imageUrls"></slideshow> 
-            <div id="innerShadow"></div>      
+            <div class="innerShadow" id="innerShadow"></div>      
           </div>
         </div>
-      </div>
-      <!-- rajouter video dans le slideshow  -->
-      <!-- <iframe *ngIf="this.safeURL != null" [src]='safeURL' frameborder="0" height="500px" width="50%"></iframe>      -->
+      </div>     
     </section>
 
   </div>

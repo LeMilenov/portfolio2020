@@ -12,7 +12,7 @@ export class DataService {
       tags:["game","unreal"],      
       iconPreview:"../../../assets/icons/unreal.png",
       imageUrls:[       
-          { url: '../../../assets/pictures/hotcoco/hotcoco_0.jpg', },
+          { url: '../../../assets/pictures/hotcoco/hotcoco_0.jpg', caption: 'click for preview', href: 'https://www.youtube.com/embed/xuGH7WzucS0'},
           { url: '../../../assets/pictures/hotcoco/hotcoco_1.jpg', },
           { url: '../../../assets/pictures/hotcoco/hotcoco_2.jpg', }
       ],
@@ -48,7 +48,7 @@ export class DataService {
       iconPreview: "../../../assets/icons/unity.png",
       tags:["game","unity"],      
       imageUrls:[       
-        { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_0.jpg'},
+        { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_0.jpg',caption: 'click for preview', href: 'https://www.youtube.com/embed/qUG0yaJ42yI'},
         { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_1.jpg'},
         { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_2.jpg'},
       ],
