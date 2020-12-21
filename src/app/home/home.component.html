@@ -13,7 +13,7 @@
         </div>
         <svg>
             <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-                <feTurbulence id="wave-filter" type="fractalNoise" numOctaves="0.01" baseFrequency='0.01' result='noise'></feTurbulence>                
+                <feTurbulence id="wave-filter" type="fractalNoise" numOctaves="1" baseFrequency='0.01' result='noise'></feTurbulence>                
                 <feDisplacementMap scale="80" in="SourceGraphic"></feDisplacementMap>
             </filter>
             <animate xlink:href="#wave-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
