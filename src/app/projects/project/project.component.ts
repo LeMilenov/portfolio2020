@@ -4,6 +4,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Project } from '../../models/project.model';
 import { DataService } from '../../data.service';
 import { ActivatedRoute } from '@angular/router';
+import anime from 'animejs/lib/anime.es.js';
+
+
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -19,8 +22,7 @@ export class ProjectComponent implements OnInit {
     private data:DataService,
     private route:ActivatedRoute,
     private _sanitizer: DomSanitizer
-    ){
- }
+    ){ }
   // imageUrls: (string | IImage)[] = [
   //   { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56748793/dbohn_170625_1801_0018.0.0.jpg', caption: 'The first slide', href: '#config' },
   //   { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => this.stuff() },
@@ -30,6 +32,8 @@ export class ProjectComponent implements OnInit {
   // ];
 
   ngOnInit() {
+    this.openBoxAnimation();
+
     this.route.params.subscribe(params=>{
       const id = +params['id'];
       if(id > 0){
@@ -41,7 +45,17 @@ export class ProjectComponent implements OnInit {
       }
     });
   }
-  stuff(){
+  
+  public openBoxAnimation(){
+    anime({
+      targets:'#innerShadow',
+      top:"3rem",
+      left:"3rem",
+      zIndex:1,
+      duration:2000,
+      easing:'linear',
+      autoplay:true
+    });
   }
 
 }

@@ -12,12 +12,12 @@ export class DataService {
       tags:["game","unreal"],      
       iconPreview:"../../../assets/icons/unreal.png",
       imageUrls:[       
-          { url: '../../../assets/pictures/hotcoco/hotcoco_0.jpg', },
+          { url: '../../../assets/pictures/hotcoco/hotcoco_0.jpg', caption: 'click for preview', href: 'https://www.youtube.com/embed/xuGH7WzucS0'},
           { url: '../../../assets/pictures/hotcoco/hotcoco_1.jpg', },
           { url: '../../../assets/pictures/hotcoco/hotcoco_2.jpg', }
       ],
       icons:[
-        // "../../../assets/icons/unreal.png"
+        "../../../assets/icons/unreal.png"
       ],
       fastDesc:"Winning game of the 2020's cocoJam",
       desc:'This game was made during the 2020 Cocojam event organised by Concordia Game Development Club and Conjure, it was sponsered by Ubisoft, Ludia, Gameloft, Gearbox, Cyberconnect2 and Hekaton. \n It was produced by the OogaBooga team composed of 4 programmers, 2 artists and a sound designer. \n Click the eye icon to learn more about the game and to try it out ! ' ,
@@ -35,7 +35,7 @@ export class DataService {
           { url: '../../../assets/pictures/anarchie/anarchie_1.jpg'},
       ],
       icons:[
-        // "../../../assets/icons/unreal.png"
+        "../../../assets/icons/unreal.png"
       ],
       fastDesc:"Unreal game made for the Creative Jam 16th edition",
       desc:"Anarchie was a game made in a team composed of 3 artists, a sound designer and 2 programmers during the Poly games and Nadjam's Virtual Creative Jam 16th edition. \n Help Archie get his toilet paper roll before there are none left !  ",
@@ -48,12 +48,12 @@ export class DataService {
       iconPreview: "../../../assets/icons/unity.png",
       tags:["game","unity"],      
       imageUrls:[       
-        { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_0.jpg'},
+        { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_0.jpg',caption: 'click for preview', href: 'https://www.youtube.com/embed/qUG0yaJ42yI'},
         { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_1.jpg'},
         { url: '../../../assets/pictures/onePixelRemaining/onePixelRemaining_2.jpg'},
       ],
       icons:[
-        // "../../../assets/icons/unity.png"
+        "../../../assets/icons/unity.png"
       ],
       fastDesc:"Game made during Conjure's monthly jam",
       desc:"One pixel remaining was made during the monthly game jam of june 2020 in a team of 4. The goal was to make a simple polished game in unity. It is a physics-based game where you have to move the platform in order to keep the pixel from the beam of lights. You can change the color of the pixel by clicking a combination of red(w key), green(d key) and blue(a key). how long can you last ?",
@@ -109,7 +109,7 @@ export class DataService {
           { url: '../../../assets/pictures/madScare/madScare_9.jpg'},
       ],
       icons:[
-        // "../../../assets/icons/unity.png"
+        "../../../assets/icons/unity.png"
       ],
       fastDesc:"A Horror game made in Unity ",
       desc:" This simple game was made to learn about the unity engine. The player is followed by a relentless Ai monster and has to interact with the world to learn how to escape it. You will have to travel through different levels, manage your batteries, discover clues and hide order to survive.",

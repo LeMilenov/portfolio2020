@@ -3,7 +3,9 @@
     margin: 0 -16px -16px 16px !important;
     display:block;
 }
-
+p{
+    font-size: large;
+}
 .content > mat-card { 
     width: 300px; 
     margin-bottom: 16px;
@@ -55,7 +57,7 @@ span{
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .mat-card-image {
         height: 20vh;
     }
