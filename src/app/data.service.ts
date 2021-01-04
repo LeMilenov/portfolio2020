@@ -8,7 +8,7 @@ export class DataService {
   projects: Project[] = [
     {
       id:5,
-      title: "Hot Coco - Coco Jam 2020",
+      title: "Hot Coco - (1st Place) Coco Jam 2020",
       tags:["game","unreal"],      
       iconPreview:"../../../assets/icons/unreal.png",
       imageUrls:[       
