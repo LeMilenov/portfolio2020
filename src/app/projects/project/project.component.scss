@@ -91,13 +91,13 @@
 
 #module p.collapse[aria-expanded="false"] {
    display: block;
-   height: 10vh !important;
+   height: 10vh ;
    overflow: hidden;
 }
-
-#module p.show[aria-expanded="false"] {
- height: 100% !important;
+#module p.collapse.show[aria-expanded="false"] {
+ height: 100%;
 }
+
 
 #module a.collapsed:after  {
    content: '+ Read More';

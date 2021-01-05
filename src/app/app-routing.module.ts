@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'Projects', component: ProjectsComponent, data : {animation: 'isRight'}},
   {path: 'Projects/:id', component: ProjectComponent, data: {animation: 'isFarRight'}},
   {path: 'Home', component: HomeComponent},
-  {path: '**', redirectTo: 'Home', pathMatch: 'full'},
+  {path: '**', redirectTo: 'Home'},
 ];
 
 @NgModule({
