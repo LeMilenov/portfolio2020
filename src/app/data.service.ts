@@ -7,6 +7,26 @@ import { Project } from './models/project.model';
 export class DataService {
   projects: Project[] = [
     {
+      id:6,
+      title: "Lost R Us, (2nd place) Montreal Global Game Jam ",
+      tags:["game","unity"],      
+      iconPreview:"../../../assets/icons/unity.png",
+      imageUrls:[       
+          { url: '../../../assets/pictures/lostrus/lostrus_01.png'  },
+          { url: '../../../assets/pictures/lostrus/lostrus_02.png', },
+          { url: '../../../assets/pictures/lostrus/lostrus_03.png', },
+          { url: '../../../assets/pictures/lostrus/lostrus_04.png', }
+      ],
+      icons:[
+        "../../../assets/icons/unity.png"
+      ],
+      fastDesc:"Winning game of the 2021's Montréal GGJ",
+      desc:'This game was made during the 2021 Montreal Global Game Jam event where around 300 jammers were registered. It is the 2nd biggest global game jam in North America. This event was sponsered by Ubisoft, Gearbox, Electronic Arts, Cyberconnect2 and Outerminds. \n It was produced by the OogaBooga team composed of 3 programmers 1 artists and a sound designer. \n Click the eye icon to learn more about the game and to try it out ! ' ,
+      githubLink:null,
+      websiteLink:"https://roseduf.itch.io/lost-r-us",
+      preview:"https://www.youtube.com/embed/xuGH7WzucS0"
+    },
+    {
       id:5,
       title: "Hot Coco - (1st Place) Coco Jam 2020",
       tags:["game","unreal"],      
